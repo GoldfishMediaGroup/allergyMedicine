@@ -1,0 +1,91 @@
+@import './mixins';
+@import './flexs';
+
+$black: #393c43;
+$white: #fff;
+$accent: #7dc9dc;
+$gray: #f1f1f2;
+
+@media (min-width: 768px) {
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+}
+
+body {
+  color: $black;
+  background: $gray;
+  font-family: 'CeraPro';
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+  &.no-scroll {
+    min-height: 100vh;
+    overflow: hidden !important;
+    touch-action: none !important;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+
+  // overflow: hidden;
+}
+
+* {
+  // outline:  1px solid red;
+}
+// main
+main {
+  flex-grow: 1;
+  section {
+    margin: 8rem 0;
+    @include small-tablet {
+    }
+    &._first {
+      margin: 0 0 8rem;
+      @include small-tablet {
+      }
+    }
+  }
+}
+
+.desktop {
+  display: flex;
+
+  @include small-tablet {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include small-tablet {
+    display: flex;
+  }
+}
+
+@import './ui/ui';
