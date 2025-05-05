@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 76rem 52.8rem 52.8rem;
     gap: 1.2rem;
-    @include small-tablet{
+    @include small-tablet {
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include small-tablet{
+    @include small-tablet {
       gap: 4rem;
       border-radius: 3.2rem;
       padding: 6.4rem 2.4rem 2.4rem;
@@ -40,7 +40,10 @@
     gap: 1.6rem;
     padding: 6rem 4.8rem 0;
     color: $white;
-    @include small-tablet{
+    & sup {
+      font-size: 3rem;
+    }
+    @include small-tablet {
       padding: 0;
       display: inline;
     }
@@ -50,7 +53,8 @@
 
   &__content-title {
     text-transform: uppercase;
-    @include small-tablet{
+
+    @include small-tablet {
       // display: inline;
       font-size: 4.8rem;
       font-weight: 700;
@@ -62,7 +66,7 @@
   /* .banner__content-subtitle */
 
   &__content-subtitle {
-    @include small-tablet{
+    @include small-tablet {
       // display: inline;
       font-size: 4.8rem;
       font-weight: 700;
@@ -77,7 +81,7 @@
     flex-direction: column;
     gap: 0.8rem;
     margin: 0 1.2rem 1.4rem;
-    @include small-tablet{
+    @include small-tablet {
       margin: 0;
       gap: 1.6rem;
     }
@@ -92,7 +96,7 @@
     background-color: $white;
     border-radius: 2.8rem;
     padding: 2.8rem 5.6rem 2.8rem 4.8rem;
-    @include small-tablet{
+    @include small-tablet {
       padding: 2.4rem 2rem;
       border-radius: 2.4rem;
     }
@@ -105,7 +109,7 @@
     align-items: center;
     gap: 2.8rem;
     width: 40.8rem;
-    @include small-tablet{
+    @include small-tablet {
       width: 100%;
       gap: 1.6rem;
     }
@@ -119,7 +123,7 @@
     background-color: $accent;
     width: 6.1rem;
     height: 6.1rem;
-    @include small-tablet{
+    @include small-tablet {
       width: 8.8rem;
       height: 8.8rem;
     }
@@ -130,7 +134,7 @@
   &__content-item-svg-box {
     width: 6.1rem;
     height: 6.1rem;
-    @include small-tablet{
+    @include small-tablet {
       width: 8.8rem;
       height: 8.8rem;
     }
@@ -163,7 +167,7 @@
     align-items: flex-end;
     position: relative;
     padding: 1.2rem;
-    @include small-tablet{
+    @include small-tablet {
       height: 103rem;
       padding: 2.4rem;
       border-radius: 3.2rem;
@@ -180,7 +184,7 @@
     transform: translateX(-50%);
     top: 2rem;
 
-    @include small-tablet{
+    @include small-tablet {
       top: -1rem;
     }
   }
@@ -190,7 +194,7 @@
   &__info-img-box {
     width: 30.1rem;
     height: 58rem;
-    @include small-tablet{
+    @include small-tablet {
       height: 56rem;
     }
 
@@ -217,9 +221,10 @@
     position: absolute;
     right: -4.5rem;
     top: 12rem;
-    @include small-tablet{
+    @include small-tablet {
       width: 16.6rem;
-      height: 16.6rem;    right: -8.5rem;
+      height: 16.6rem;
+      right: -8.5rem;
       top: 15rem;
     }
   }
@@ -230,7 +235,7 @@
     font-weight: 500;
     font-size: 6.4rem;
     line-height: 100%;
-    @include small-tablet{
+    @include small-tablet {
       font-size: 8.6rem;
     }
   }
@@ -238,7 +243,7 @@
   /* .banner__info-img-text */
 
   &__info-img-text {
-    @include small-tablet{
+    @include small-tablet {
       font-size: 2.6rem;
     }
   }
@@ -253,7 +258,7 @@
     flex-direction: column;
     gap: 0.8rem;
 
-    @include small-tablet{
+    @include small-tablet {
       padding: 4rem 2.4rem;
       gap: 2rem;
       border-radius: 2.4rem;
@@ -268,7 +273,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    @include small-tablet{
+    @include small-tablet {
       padding-bottom: 2rem;
       border-bottom: 0.2rem solid rgba(57, 60, 67, 0.2);
       gap: 1.6rem;

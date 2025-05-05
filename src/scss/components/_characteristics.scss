@@ -23,6 +23,9 @@
   /* .characteristics__title */
 
   &__title {
+    & sup {
+      font-size: 3rem;
+    }
   }
 
   /* .characteristics__content-box */
@@ -133,7 +136,7 @@
     border-radius: 6rem;
     &:hover {
       & .characteristics__item-btn-svg-box {
-        scale:1.15;
+        scale: 1.15;
       }
     }
     @include small-tablet {

@@ -3,7 +3,7 @@ import { rem } from '../utils/constants';
 
 function about() {
   const swiperAbout = new Swiper('.about__swiper', {
-    speed: 1500,
+    speed: 1200,
     slidesPerView: '1',
     effect: 'fade',
     fadeEffect: {
@@ -15,7 +15,7 @@ function about() {
     loop: true,
     // allowTouchMove: false,
     autoplay: {
-      delay: 3000,
+      delay: 1000,
       disableOnInteraction: false
     }
   });

@@ -25,6 +25,9 @@
 
   &__title {
     color: $white;
+    & sup {
+      font-size: 3rem;
+    }
   }
 
   /* .where__list */

@@ -9,13 +9,14 @@ function history() {
       // pagination: {
       //   el: '.home-review-pagination'
       // },
-      allowTouchMove: false,
+      //   allowTouchMove: false,
       loop: true,
+      grabCursor: true,
       effect: 'creative',
       creativeEffect: {
         prev: {
           // shadow: true,
-          translate: ['-20%', 0, 0]
+          translate: ['-20%', 0, -1]
         },
         next: {
           translate: ['100%', 0, 0]
@@ -33,6 +34,7 @@ function history() {
       });
 
     sliderContent.controller.control = sliderImg;
+    sliderImg.controller.control = sliderContent;
   }
   historySwiper();
 
@@ -46,17 +48,20 @@ function history() {
       const parent = btn.parentElement;
       const text = item.querySelector('.history__tab-text');
 
-      item.addEventListener('click', () => {
-        item.classList.add('isActive');
+      item.addEventListener('click', (e) => {
+       if ( e.target.classList.contains('history__tab-header')) {
+        item.classList.toggle('isActive');
         parent.classList.contains('isActive') ? showMore() : hideMore();
-        console.log(item);
-        $(item).find('.history__tab-content').slideDown();
+      
+        $(item).find('.history__tab-content').slideToggle();
         tabs.forEach((innerItem) => {
           if (item != innerItem) {
             $(innerItem).find('.history__tab-content').slideUp();
             innerItem.classList.remove('isActive');
           }
         });
+       }
+       
       });
 
       btn.addEventListener('click', () => {
