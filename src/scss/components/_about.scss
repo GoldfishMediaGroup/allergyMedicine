@@ -208,6 +208,9 @@
   /* .about__title */
 
   &__title {
+    & sup {
+      font-size: 3rem;
+    }
   }
 
   /* .about__text */

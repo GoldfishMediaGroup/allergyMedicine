@@ -14,6 +14,7 @@ import smoothScroll from '../components/smoothScroll';
 import footerCookieDisclamer from '../components/footerCookieDisclamer';
 import about from '../components/about';
 import history from '../components/history';
+import banner from '../components/banner';
 
 export const modules = {};
 
@@ -43,5 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch {}
   try {
     history();
+  } catch {}
+  try {
+    banner();
   } catch {}
 });

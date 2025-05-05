@@ -295,6 +295,7 @@
     justify-content: center;
     transition: transform 0.5s;
     transform: rotate(180deg);
+    pointer-events: none;
   }
 
   /* .history__tab-header-svg-box */
@@ -312,7 +313,7 @@
 
   /* .history__tab-header-title */
 
-  &__tab-header-title {
+  &__tab-header-title {    pointer-events: none;
   }
 
   /* .history__tab-content */
