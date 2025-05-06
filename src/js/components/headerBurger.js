@@ -64,16 +64,18 @@ function headerBurger() {
     const disableScrollClass = 'no-scroll';
   
     function openBurger() {
-      header.classList.add('no-transform');
+      // header.classList.add('no-transform');
       body.classList.add(disableScrollClass);
 
   
       burger.classList.add('isActive');
       burgerClose.classList.add('isActive');
       navWrapper.classList.add('isActive');
-      if (lenis && typeof lenis.stop === 'function') {
-        lenis.stop();
-      }
+      // if (lenis && typeof lenis.stop === 'function') {
+      //   lenis.stop();
+      // }
+
+      
       window.scrollTo({
         top: 0,
         left: 0,
@@ -82,7 +84,7 @@ function headerBurger() {
     }
   
     function closeBurger() {
-      header.classList.remove('no-transform');
+      // header.classList.remove('no-transform');
       body.classList.remove(disableScrollClass);
 
   
@@ -115,14 +117,14 @@ function headerBurger() {
   
     // Закрытие меню при ресайзе окна
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && burger.classList.contains('isActive')) {
+      if (window.innerWidth > 1024 && burger.classList.contains('isActive')) {
         closeBurger();
       }
     });
   
     // Устранение проблем с Safari
     // Проверка на инерционную прокрутку и touch-action
-    navWrapper.style.touchAction = 'none'; // Отключение жестов прокрутки внутри меню
+    // navWrapper.style.touchAction = 'none'; // Отключение жестов прокрутки внутри меню
   }
   
   export default headerBurger;
