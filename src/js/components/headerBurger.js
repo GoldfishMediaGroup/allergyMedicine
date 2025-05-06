@@ -63,8 +63,11 @@ function headerBurger() {
     // Класс для блокировки скролла
     const disableScrollClass = 'no-scroll';
   
+
     function openBurger() {
       // header.classList.add('no-transform');
+
+
       body.classList.add(disableScrollClass);
 
   
@@ -91,9 +94,9 @@ function headerBurger() {
       burger.classList.remove('isActive');
       burgerClose.classList.remove('isActive');
       navWrapper.classList.remove('isActive');
-      if (lenis && typeof lenis.start === 'function') {
-        lenis.start();
-      }
+      // if (lenis && typeof lenis.start === 'function') {
+      //   lenis.start();
+      // }
     }
   
     // Обработчик клика на бургер

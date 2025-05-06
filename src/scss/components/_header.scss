@@ -81,6 +81,7 @@
       z-index: 1000;
       transition: scale 0.3s;
       scale: 0;
+      
       &.isActive {
         scale: 1;
       }
@@ -216,6 +217,7 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 10rem;
+     
     }
     @include small-tablet {
       margin: 15.2rem 1.6rem 1.6rem;
