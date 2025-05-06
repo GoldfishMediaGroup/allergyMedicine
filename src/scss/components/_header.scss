@@ -81,6 +81,7 @@
       z-index: 1000;
       transition: scale 0.3s;
       scale: 0;
+      
       &.isActive {
         scale: 1;
       }
