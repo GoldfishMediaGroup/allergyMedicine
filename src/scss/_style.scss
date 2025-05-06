@@ -38,9 +38,11 @@ body {
     touch-action: none;
   }
   &.no-scroll {
-    min-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
     overflow: hidden !important;
     touch-action: none !important;
+    position: fixed;
   }
 }
 
@@ -62,11 +64,19 @@ main {
   flex-grow: 1;
   section {
     margin: 8rem 0;
+    @include tablet {
+      margin: 4rem 0;
+    }
     @include small-tablet {
+      margin: 8rem 0;
     }
     &._first {
       margin: 0 0 8rem;
+      @include tablet {
+        margin: 0 0 4rem;
+      }
       @include small-tablet {
+        margin: 0 0 8rem;
       }
     }
   }
@@ -75,14 +85,27 @@ main {
 .desktop {
   display: flex;
 
+  @include tablet {
+    display: none;
+  }
   @include small-tablet {
     display: none;
   }
+}
+.tablet {
+  // display: flex;
+
+  // @include small-tablet {
+  //   display: none;
+  // }
 }
 
 .mobile {
   display: none;
 
+  @include tablet {
+    display: none;
+  }
   @include small-tablet {
     display: flex;
   }

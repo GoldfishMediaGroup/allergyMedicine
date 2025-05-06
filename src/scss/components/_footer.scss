@@ -11,6 +11,9 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    @include tablet {
+      gap: 1.6rem;
+    }
     @include small-tablet {
       gap: 3.2rem;
     }
@@ -26,11 +29,16 @@
     justify-content: space-between;
     gap: 23.3rem;
     position: relative;
+    @include tablet {
+      flex-direction: column;
+      padding: 2.6rem 3.2rem 2rem;
+      border-radius: 2rem;
+      gap: 3.2rem;
+    }
     @include small-tablet {
       padding: 5.6rem 2.4rem 4rem;
       border-radius: 3.2rem;
       gap: 5.2rem;
-      flex-direction: column;
     }
   }
 
@@ -44,6 +52,10 @@
   &__logo-img-box {
     width: 19.7rem;
     height: 4.5rem;
+    @include tablet {
+      height: 4rem;
+      width: 17.2rem;
+    }
     @include small-tablet {
       width: 21.6rem;
       height: 5rem;
@@ -61,8 +73,11 @@
     flex-grow: 1;
     display: flex;
     gap: 11rem;
-    @include small-tablet {
+    @include tablet {
       flex-direction: column;
+      gap: 2rem;
+    }
+    @include small-tablet {
       gap: 4rem;
     }
   }
@@ -73,6 +88,9 @@
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+    @include tablet {
+      gap: 2rem;
+    }
     @include small-tablet {
       gap: 4rem;
     }
@@ -86,6 +104,9 @@
   /* .footer__nav-link */
 
   &__nav-link {
+    @include tablet {
+      font-size: 1.6rem;
+    }
     @include small-tablet {
       font-size: 2.4rem;
     }
@@ -98,9 +119,11 @@
     flex-direction: column;
     gap: 3.2rem;
     width: 37.7rem;
+    @include tablet {
+      width: 100%; gap: 1.6rem;
+    }
     @include small-tablet {
       gap: 2.4rem;
-      width: 100%;
     }
   }
 
@@ -111,6 +134,9 @@
     font-weight: 400;
     line-height: 120%;
     font-size: 1.8rem;
+    @include tablet {
+      font-size: 1.8rem;
+    }
     @include small-tablet {
       font-size: 2.8rem;
     }
@@ -122,6 +148,9 @@
     display: flex;
     flex-direction: column;
     gap: 2.6rem;
+    @include tablet {
+      gap: 1.2rem;
+    }
     @include small-tablet {
       gap: 1.6rem;
     }
@@ -138,6 +167,9 @@
     font-weight: 400;
     line-height: 120%;
     font-size: 1.6rem;
+    @include tablet {
+      font-size: 1.4rem;
+    }
     @include small-tablet {
       font-size: 2.4rem;
     }
@@ -163,6 +195,14 @@
       }
     }
 
+    @include tablet {
+      border-radius: 1.6rem;
+      top: 1.2rem;
+      right: 3.2rem;
+      width: 6rem;
+      height: 6rem;
+      border: 0.1rem solid $black;
+    }
     @include small-tablet {
       border-radius: 3.2rem;
       top: 3.2rem;
@@ -182,6 +222,10 @@
       object-fit: cover;
     }
     @include small-tablet {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    @include small-tablet {
       width: 4rem;
       height: 4rem;
     }
@@ -193,11 +237,20 @@
     width: 184rem;
     height: 6.5rem;
     align-self: center;
+    @include tablet {
+      width: 68.6rem;
+      height: 9.8rem;
+    }
     @include small-tablet {
       width: 68.6rem;
       height: 9rem;
     }
     & img {
+      &.mobile {
+        @include tablet {
+          display: flex;
+        }
+      }
       width: 100%;
       height: 100%;
       object-fit: cover;

@@ -10,9 +10,12 @@
     display: grid;
     grid-template-columns: 76rem 52.8rem 52.8rem;
     gap: 1.2rem;
-    @include small-tablet {
+    @include tablet {
       display: flex;
       flex-direction: column;
+      gap: 1.6rem;
+    }
+    @include small-tablet {
       gap: 2.5rem;
     }
   }
@@ -25,8 +28,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include small-tablet {
+    @include tablet {
       gap: 4rem;
+      border-radius: 2rem;
+      padding: 3.5rem 3.2rem 3.2rem;
+    }
+    @include small-tablet {
       border-radius: 3.2rem;
       padding: 6.4rem 2.4rem 2.4rem;
     }
@@ -43,35 +50,17 @@
     & sup {
       font-size: 3rem;
     }
-    @include small-tablet {
+    @include tablet {
       padding: 0;
-      display: inline;
     }
-  }
-
-  /* .banner__content-title */
-
-  &__content-title {
-    text-transform: uppercase;
-
     @include small-tablet {
       // display: inline;
-      font-size: 4.8rem;
-      font-weight: 700;
-      line-height: 110%;
-      text-transform: none;
     }
   }
 
   /* .banner__content-subtitle */
 
   &__content-subtitle {
-    @include small-tablet {
-      // display: inline;
-      font-size: 4.8rem;
-      font-weight: 700;
-      line-height: 110%;
-    }
   }
 
   /* .banner__content-list */
@@ -81,8 +70,11 @@
     flex-direction: column;
     gap: 0.8rem;
     margin: 0 1.2rem 1.4rem;
-    @include small-tablet {
+    @include tablet {
       margin: 0;
+      gap: 1.2rem;
+    }
+    @include small-tablet {
       gap: 1.6rem;
     }
   }
@@ -96,6 +88,10 @@
     background-color: $white;
     border-radius: 2.8rem;
     padding: 2.8rem 5.6rem 2.8rem 4.8rem;
+    @include tablet {
+      padding: 3rem 3.3rem 3rem 1.6rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 2.4rem 2rem;
       border-radius: 2.4rem;
@@ -109,6 +105,10 @@
     align-items: center;
     gap: 2.8rem;
     width: 40.8rem;
+    @include tablet {
+      width: 39rem;
+      gap: 1.2rem;
+    }
     @include small-tablet {
       width: 100%;
       gap: 1.6rem;
@@ -123,6 +123,10 @@
     background-color: $accent;
     width: 6.1rem;
     height: 6.1rem;
+    @include tablet {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
     @include small-tablet {
       width: 8.8rem;
       height: 8.8rem;
@@ -134,6 +138,10 @@
   &__content-item-svg-box {
     width: 6.1rem;
     height: 6.1rem;
+    @include tablet {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
     @include small-tablet {
       width: 8.8rem;
       height: 8.8rem;
@@ -156,6 +164,12 @@
     border: 0.1rem solid $black;
     border-radius: 1.8rem;
     padding: 1.4rem 2.5rem;
+    @include tablet {
+      display: flex;
+    }
+    @include small-tablet {
+      display: none;
+    }
   }
 
   /* .banner__info-box */
@@ -167,6 +181,11 @@
     align-items: flex-end;
     position: relative;
     padding: 1.2rem;
+    @include tablet {
+      height: 74.8rem;
+      padding: 3.2rem 3rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 103rem;
       padding: 2.4rem;
@@ -194,7 +213,12 @@
   &__info-img-box {
     width: 30.1rem;
     height: 58rem;
+    @include tablet {
+      width: 24.1rem;
+      height: 49rem;
+    }
     @include small-tablet {
+      width: 30.1rem;
       height: 56rem;
     }
 
@@ -221,6 +245,10 @@
     position: absolute;
     right: -4.5rem;
     top: 12rem;
+    @include tablet {
+      width: 10rem;
+      height: 10rem;
+    }
     @include small-tablet {
       width: 16.6rem;
       height: 16.6rem;
@@ -235,6 +263,9 @@
     font-weight: 500;
     font-size: 6.4rem;
     line-height: 100%;
+    @include tablet {
+      font-size: 4.8rem;
+    }
     @include small-tablet {
       font-size: 8.6rem;
     }
@@ -243,6 +274,9 @@
   /* .banner__info-img-text */
 
   &__info-img-text {
+    @include tablet {
+      font-size: 1.6rem;
+    }
     @include small-tablet {
       font-size: 2.6rem;
     }
@@ -257,7 +291,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-
+    @include tablet {
+      padding: 2rem;
+      gap: 0.8rem;
+      border-radius: 1.6rem;
+    }
     @include small-tablet {
       padding: 4rem 2.4rem;
       gap: 2rem;
@@ -273,6 +311,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    @include tablet {
+      padding-bottom: 0.8rem;
+      border-bottom: 0.1rem solid rgba(57, 60, 67, 0.2);
+      gap: 0.8rem;
+    }
     @include small-tablet {
       padding-bottom: 2rem;
       border-bottom: 0.2rem solid rgba(57, 60, 67, 0.2);

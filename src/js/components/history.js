@@ -70,9 +70,12 @@ function history() {
       });
 
       function showMore() {
-        text.style.display = 'block';
-        text.style.maxHeight = `${text.scrollHeight + 600}px`;
-        btnText.textContent = 'Свернуть';
+        setTimeout(() => {
+          text.style.display = 'block';
+          text.style.maxHeight = `${text.scrollHeight + 600}px`;
+          btnText.textContent = 'Свернуть';
+        }, 100)
+ 
       }
 
       function hideMore() {
@@ -85,10 +88,10 @@ function history() {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth < 768) {
-        const text = document.querySelector('.history__tab.isActive .history__tab-text-box.isActive .history__tab-text');
+      const text = document.querySelector('.history__tab.isActive .history__tab-text-box.isActive .history__tab-text');
+      if (window.innerWidth < 1024) {
         if (text) text.style.maxHeight = `${text.scrollHeight}px`;
-      }
+      } 
     });
   }
   historyAccordeon();

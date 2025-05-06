@@ -13,6 +13,11 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    @include tablet {
+      padding: 3.2rem 3.2rem 4rem;
+      gap: 3.2rem;
+      border-radius: 1.6rem;
+    }
     @include small-tablet {
       padding: 5.6rem 2.4rem;
       gap: 4.8rem;
@@ -32,7 +37,7 @@
     grid-template-columns: repeat(2, 85.4rem);
     gap: 1.2rem;
     position: relative;
-    @include small-tablet {
+    @include tablet {
       display: none;
     }
   }
@@ -246,7 +251,7 @@
 
   &__mobile-wrapper {
     display: none;
-    @include small-tablet {
+    @include tablet {
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
@@ -258,10 +263,10 @@
   &__tab {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
-    padding: 2.4rem;
     background-color: $gray;
-    border-radius: 3rem;
+    gap: 1.4rem;
+    border-radius: 2.4rem;
+    padding: 1.4rem 1.6rem;
     &:first-of-type {
       & .history__tab-content {
         display: block;
@@ -273,6 +278,12 @@
         transform: rotate(0deg);
       }
     }
+
+    @include small-tablet {
+      gap: 1.6rem;
+      padding: 2.4rem;
+      border-radius: 4.8rem;
+    }
   }
 
   /* .history__tab-header */
@@ -280,14 +291,18 @@
   &__tab-header {
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 1.2rem;
+
+    @include small-tablet {
+      gap: 2.4rem;
+    }
   }
 
   /* .history__tab-header-svg-wrapper */
 
   &__tab-header-svg-wrapper {
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
     border-radius: 50%;
     background-color: $accent;
     display: flex;
@@ -296,37 +311,58 @@
     transition: transform 0.5s;
     transform: rotate(180deg);
     pointer-events: none;
+    @include small-tablet {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
   }
 
   /* .history__tab-header-svg-box */
 
   &__tab-header-svg-box {
-    width: 4rem;
-    height: 4rem;
+    width: 2.8rem;
+    height: 2.8rem;
     & img,
     & svg {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    @include small-tablet {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 
   /* .history__tab-header-title */
 
-  &__tab-header-title {    pointer-events: none;
+  &__tab-header-title {
+    pointer-events: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    @include small-tablet {
+      font-size: 3.2rem;
+      text-transform: none;
+    }
   }
 
   /* .history__tab-content */
 
   &__tab-content {
-    padding-top: 1.6rem;
+    padding-top: 1.2rem;
     display: none;
+    @include small-tablet {
+      padding-top: 1.6rem;
+    }
   }
 
   &__tab-content-inner {
     display: flex;
     flex-direction: column;
-    gap: 4.8rem;
+    gap: 2rem;
+    @include small-tablet {
+      gap: 4.8rem;
+    }
   }
 
   /* .history__tab-info-box */
@@ -334,32 +370,45 @@
   &__tab-info-box {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 2rem;
+    @include small-tablet {
+      gap: 1.6rem;
+    }
   }
 
   /* .history__tab-img-wrapper */
 
   &__tab-img-wrapper {
     border-radius: 1.6rem;
-    width: 62.2rem;
-    height: 58.4rem;
-    background: url(./assets/images/historySlideBg.webp) no-repeat top/cover;
+    width: 65.5rem;
+    height: 42.1rem;
+    background: url(./assets/images/historySlideBgTablet.webp) no-repeat top/cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include small-tablet {
+      border-radius: 1.6rem;
+      width: 62.2rem;
+      height: 58.4rem;
+      background: url(./assets/images/historySlideBg.webp) no-repeat top/cover;
+    }
   }
 
   /* .history__tab-img-box */
 
   &__tab-img-box {
-    width: 41.2rem;
-    height: 41.2rem;
+    width: 31.2rem;
+    height: 31.2rem;
     border-radius: 50%;
     overflow: hidden;
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    @include small-tablet {
+      width: 41.2rem;
+      height: 41.2rem;
     }
   }
 
@@ -386,20 +435,33 @@
     font-size: 2.8rem;
     font-weight: 400;
     line-height: 150%;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10;
-    transition: max-height 0.5s ease;
-    max-height: 42rem; /* ограничиваем 2 строки при line-height: 1.4-2 */
+
+    @media (max-width: 64em) and (min-width: 47.9375em) {
+      max-height: none !important;
+      font-size: 1.6rem;
+    }
+
+    @include small-tablet {
+      font-size: 2.8rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      transition: max-height 0.5s ease;
+      max-height: 42rem; /* ограничиваем 2 строки при line-height: 1.4-2 */
+    }
   }
 
   /* .history__tab-show-more-btn */
 
   &__tab-show-more-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
   }
 
   /* .history__tab-show-more-btn-text */
@@ -430,20 +492,28 @@
     display: flex;
 
     flex-wrap: wrap;
-    gap: 1.6rem;
+    gap: 0.8rem;
+    @include small-tablet {
+      gap: 1.6rem;
+    }
   }
 
   /* .history__tab-item */
 
   &__tab-item {
+    font-size: 1.8rem;
+    padding: 0.9rem 2.4rem;
+    border-radius: 2.4rem;
     font-weight: 400;
-    font-size: 2.8rem;
     line-height: 140%;
     color: #898b93;
-    padding: 1.2rem 4.8rem;
-    border-radius: 4.8rem;
     backdrop-filter: blur(12px);
     background: #fff;
     width: fit-content;
+    @include small-tablet {
+      font-size: 2.8rem;
+      padding: 1.2rem 4.8rem;
+      border-radius: 4.8rem;
+    }
   }
 }

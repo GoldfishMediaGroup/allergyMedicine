@@ -14,6 +14,11 @@
     flex-direction: column;
     gap: 6rem;
     background: url(./assets/images/whereBg.webp) no-repeat top/cover;
+    @include tablet {
+      padding: 3.2rem;
+      gap: 3.2rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 5.6rem 2.4rem;
       gap: 3.6rem;
@@ -36,8 +41,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.167rem;
-    @include small-tablet {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
+      gap: 0.8;
+    }
+    @include small-tablet {
       gap: 2.4rem 2.2rem;
     }
   }
@@ -57,6 +65,9 @@
         scale: 1.05;
       }
     }
+    @include tablet {
+      gap: 0.6rem;
+    }
     @include small-tablet {
       gap: 0.8rem;
     }
@@ -70,6 +81,10 @@
     background-color: $white;
     border-radius: 3.2rem;
     overflow: hidden;
+    @include tablet {
+      height: 13rem;
+      border-radius: 1.2rem;
+    }
     @include small-tablet {
       height: 18.4rem;
       border-radius: 1.6rem;
@@ -92,6 +107,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tablet {
+      border-radius: 1.2rem;
+      padding: 0.7rem;
+    }
     @include small-tablet {
       border-radius: 0.8rem;
       padding: 2.8rem 0;
@@ -101,10 +120,13 @@
   /* .where__city */
 
   &__city {
-    @include small-tablet {
+    @include tablet {
       font-weight: 400;
-      font-size: 2.4rem;
+      font-size: 1.6rem;
       line-height: 140%;
+    }
+    @include small-tablet {
+      font-size: 2.4rem;
     }
   }
 }

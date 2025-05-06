@@ -2,9 +2,11 @@
   font-weight: 500;
   font-size: 8rem;
   line-height: 100%;
-  @include small-tablet {
+  @include tablet {
     font-size: 4.8rem;
     font-weight: 700;
+  }
+  @include small-tablet {
   }
 }
 
@@ -12,9 +14,12 @@
   font-weight: 500;
   font-size: 5.4rem;
   line-height: 100%;
+  @include tablet {
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
   @include small-tablet {
     font-size: 5.6rem;
-    font-weight: 700;
   }
 }
 .tl3 {
@@ -26,6 +31,9 @@
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 140%;
+  @include tablet {
+    font-size: 2rem;
+  }
   @include small-tablet {
     font-size: 4rem;
   }
@@ -38,6 +46,9 @@
   &_medium {
     font-weight: 500;
   }
+  @include tablet {
+    font-size: 2rem;
+  }
   @include small-tablet {
     font-size: 3.2rem;
   }
@@ -49,6 +60,9 @@
   &_medium {
     font-weight: 500;
   }
+  @include tablet {
+    font-size: 1.6rem;
+  }
   @include small-tablet {
     font-size: 2.4rem;
   }
@@ -59,6 +73,9 @@
   line-height: 140%;
   &_medium {
     font-weight: 500;
+  }
+  @include tablet {
+    font-size: 1.6rem;
   }
   @include small-tablet {
     font-size: 2.8rem;
