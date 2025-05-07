@@ -1,9 +1,8 @@
 // body lock
 import { modules } from '../dev/kuloverova';
-import { bodyLockStatus, bodyUnlock, bodyLock } from "../utils/constants";
+import { bodyLockStatus, bodyUnlock, bodyLock } from '../utils/constants';
 
 const popup = () => {
- 
   // launch ======================================================================
   class Popup {
     constructor(options) {
@@ -117,8 +116,28 @@ const popup = () => {
 
             return;
           }
+          // const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
+          // if (buttonClose || (!e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen)) {
+          //   e.preventDefault();
+          //   this.close();
+          //   return;
+          // }
+          // const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
+          // const clickedOutsideContent = !e.target.closest(`.${this.options.classes.popupContent}`);
+          // const isProtected = this.targetOpen.element?.hasAttribute('data-popup-no-close');
+
+          // if (buttonClose || (clickedOutsideContent && this.isOpen && !isProtected)) {
+          //   e.preventDefault();
+          //   this.close();
+          //   return;
+          // }
+
           const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
-          if (buttonClose || (!e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen)) {
+          const clickedOutsideContent = !e.target.closest(`.${this.options.classes.popupContent}`);
+          const el = this.targetOpen?.element;
+          const isProtected = el instanceof Element && el.hasAttribute('data-popup-no-close');
+
+          if (buttonClose || (clickedOutsideContent && this.isOpen && !isProtected)) {
             e.preventDefault();
             this.close();
             return;
@@ -128,9 +147,29 @@ const popup = () => {
       document.addEventListener(
         'keydown',
         function (e) {
+          // if (this.options.closeEsc && e.which == 27 && e.code === 'Escape' && this.isOpen) {
+          //   e.preventDefault();
+          //   this.close();
+          //   return;
+          // }
+
+          // if (this.options.closeEsc && e.which == 27 && e.code === 'Escape' && this.isOpen) {
+          //   const isProtected = this.targetOpen.element?.hasAttribute('data-popup-no-close');
+          //   if (!isProtected) {
+          //     e.preventDefault();
+          //     this.close();
+          //   }
+          //   return;
+          // }
           if (this.options.closeEsc && e.which == 27 && e.code === 'Escape' && this.isOpen) {
-            e.preventDefault();
-            this.close();
+            const el = this.targetOpen?.element;
+            if (el instanceof Element) {
+              const isProtected = el.hasAttribute('data-popup-no-close');
+              if (!isProtected) {
+                e.preventDefault();
+                this.close();
+              }
+            }
             return;
           }
           if (this.options.focusCatch && e.which == 9 && this.isOpen) {
@@ -165,7 +204,6 @@ const popup = () => {
     open(selectorValue) {
       if (bodyLockStatus) {
         this.bodyLock = document.documentElement.classList.contains('lock') && !this.isOpen ? true : false;
-        
 
         if (selectorValue && typeof selectorValue === 'string' && selectorValue.trim() !== '') {
           this.targetOpen.selector = selectorValue;
@@ -197,9 +235,7 @@ const popup = () => {
                 .querySelector('.popup__text')
                 .setAttribute(`${this.options.youtubePlaceAttribute}`, '');
             }
-            this.targetOpen.element
-              .querySelector(`[${this.options.youtubePlaceAttribute}]`)
-              .appendChild(iframe);
+            this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
           }
           if (this.options.hashSettings.location) {
             this._getHash();
@@ -301,7 +337,7 @@ const popup = () => {
     }
     _openToHash() {
       const elementInPage = document.querySelector(window.location.hash);
-  
+
       if (elementInPage) {
         // Это якорная ссылка, не открываем попап
         return;
@@ -322,7 +358,7 @@ const popup = () => {
       //     console.log(buttons)
       //     console.log(classInHash)
       if (classInHash) this.open(classInHash);
-      // buttons && 
+      // buttons &&
     }
     _setHash() {
       history.pushState('', '', this.hash);

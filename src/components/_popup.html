@@ -34,5 +34,35 @@
     </div>
   </div>
 </div>
-
-
+<!-- data-popup-no-close добавить атрибут, если не нужно эту модалку закрывать на клик по оверлею, только по внутненним кнопкам закрытия-->
+<div id="popup__arise-expert" aria-hidden="true" class="popup popup--arise-expert">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262"
+              stroke="#717378"
+              stroke-width="1.83466"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-desk txt16">
+              В данном разделе информация предназначена исключительно для специалистов в области здравоохранения – медицинских и
+              фармацевтических работников.
+            </p>
+            <p class="popup__body-content-title txt20">Вы являетесь медицинским специалистом?</p>
+          </div>
+          <div class="popup__btn-box">
+            <button class="popup__btn popup__btn--yes" data-close>да</button>
+            <button class="popup__btn popup__btn-no" data-close>нет</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

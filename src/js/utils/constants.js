@@ -18,7 +18,7 @@ export let bodyUnlock = (delay = 500) => {
   if (bodyLockStatus) {
     setTimeout(() => {
       body.style.paddingRight = '0px';
-      document.querySelector('header').style.paddingRight = '0px';
+      // document.querySelector('header').style.paddingRight = '0px';
       if (cookie) document.querySelector('.cookie').style.paddingRight = '0px';
       if (disclaimer) document.querySelector('.disclaimer').style.paddingRight = '0px';
       document.documentElement.classList.remove('lock');
@@ -36,11 +36,11 @@ export let bodyLock = (delay = 500) => {
   let body = document.querySelector('body');
   const cookie = document.querySelector('.cookie');
   const disclaimer = document.querySelector('.disclaimer');
+  const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
   if (bodyLockStatus) {
-    const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
     let scrollWith = getScrollbarWidth();
     body.style.paddingRight = `${scrollWith}px`;
-    document.querySelector('header').style.paddingRight = `${scrollWith}px`;
+    // document.querySelector('header').style.paddingRight = `${scrollWith}px`;
 
     if (cookie) cookie.style.paddingRight = `${scrollWith}px`;
     if (disclaimer) disclaimer.style.paddingRight = `${scrollWith}px`;

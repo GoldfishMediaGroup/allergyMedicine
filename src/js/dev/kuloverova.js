@@ -15,6 +15,7 @@ import footerCookieDisclamer from '../components/footerCookieDisclamer';
 import about from '../components/about';
 import history from '../components/history';
 import banner from '../components/banner';
+import disclamerModal from '../components/disclamerModal';
 
 export const modules = {};
 
@@ -48,4 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     banner();
   } catch {}
+  try {
+    disclamerModal();
+  } catch {}
+
+
 });
