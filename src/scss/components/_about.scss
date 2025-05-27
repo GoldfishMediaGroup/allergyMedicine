@@ -188,24 +188,24 @@
   /* .about__item-link */
 
   &__item-link {
-    padding: 1.4rem 2.5rem;
-    background-color: $accent;
-    color: $white;
-    border-radius: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    @include tablet {
-      font-size: 1.8rem;
-      padding: 1.4rem;
-      width: 100%;
-      border-radius: 1.8rem;
-    }
-    @include small-tablet {
-      font-size: 3.2rem;
-      padding: 2.5rem;
-      border-radius: 3.6rem;
-    }
+    // padding: 1.4rem 2.5rem;
+    // background-color: $accent;
+    // color: $white;
+    // border-radius: 1.8rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: fit-content;
+    // @include tablet {
+    //   font-size: 1.8rem;
+    //   padding: 1.4rem;
+    //   width: 100%;
+    //   border-radius: 1.8rem;
+    // }
+    // @include small-tablet {
+    //   font-size: 3.2rem;
+    //   padding: 2.5rem;
+    //   border-radius: 3.6rem;
+    // }
   }
 }

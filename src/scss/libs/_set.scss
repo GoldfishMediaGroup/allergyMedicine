@@ -25,7 +25,9 @@ body {
   color: #000; // цвет по умолчанию текста по сайту
   background-color: #ffffff;
 }
-
+iframe {
+  pointer-events: fill !important;
+}
 input,
 textarea {
   -webkit-animation: bugfix infinite 1s;

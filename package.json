@@ -58,6 +58,7 @@
     "jquery.marquee": "^1.6.1",
     "jsdom": "^22.1.0",
     "matter-js": "^0.20.0",
+    "simplebar": "^6.3.1",
     "swiper": "^11.0.5",
     "tornis": "^0.3.6",
     "wow.js": "^1.2.2"

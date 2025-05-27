@@ -1,1 +1,1 @@
-# tipressin
+# allergyMedicine
