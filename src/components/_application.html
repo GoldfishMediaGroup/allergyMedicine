@@ -1,0 +1,67 @@
+<section class="application" id="application">
+  <div class="application__container container">
+    <div class="application__inner">
+      <p class="application__title tl2">Есть вопросы? Напишите нам</p>
+      <div class="application__body">
+        <form class="application__form form" data-popup-message="#popup__success" data-dev action="">
+          <div class="application__input-box">
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input
+                  class="input--name form__input"
+                  type="text"
+                  data-validate
+                  data-required="name"
+                  autocomplete="off"
+                  name="form[]"
+                  placeholder="Введите имя"
+                />
+                <span class="form__input-placeholder">Имя</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input
+                  class="input--mail form__input"
+                  type="text"
+                  data-validate
+                  data-required="email"
+                  autocomplete="off"
+                  name="form[]"
+                  placeholder="Введите email"
+                />
+                <span class="form__input-placeholder">Email</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper form__input-wrapper--textarea txt20">
+                <div class="form__textarea-wrapper">
+                  <textarea class="form__textarea application__form-textarea" name="form[]" placeholder="E-mail"></textarea>
+                </div>
+              </span>
+              <span class="form__textarea-span form__absolute-span" data-length="450">
+                Осталось
+                <span></span>
+                символов
+              </span>
+            </label>
+
+            <div id="captcha-container" class="smart-captcha" data-sitekey="">
+              <input type="hidden" name="smart-token" value="" />
+            </div>
+          </div>
+
+          <button disabled type="submit" class="application__btn" >Отправить</button>
+        </form>
+
+        <div class="application__img">
+          <img src="./assets/images/materialsImg/applicationPhoto.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

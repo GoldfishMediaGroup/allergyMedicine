@@ -60,6 +60,9 @@
   &_medium {
     font-weight: 500;
   }
+  &_bold {
+    font-weight: 700;
+  }
   @include tablet {
     font-size: 1.6rem;
   }

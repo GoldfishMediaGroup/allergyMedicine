@@ -1,0 +1,140 @@
+.application {
+  /* .application__container */
+
+  &__container {
+  }
+
+  /* .application__inner */
+
+  &__inner {
+    padding: 6rem;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background: $white;
+
+    @include tablet {
+      padding: 3.2rem;
+      gap: 3.2rem;
+      border-radius: 1.6rem;
+    }
+    @include small-tablet {
+      padding: 5.6rem 2.4rem;
+    }
+  }
+
+  /* .application__title */
+
+  &__title {
+    @include small-tablet {
+      font-size: 4.8rem;
+    }
+  }
+
+  /* .application__body */
+
+  &__body {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  /* .application__form */
+
+  &__form {
+    border-radius: 3.2rem;
+    padding: 10.2rem 20.4rem;
+    background: $gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+    width: 85.4rem;
+    @media (max-width: 1280px) {
+      padding: 10.2rem 15.4rem;
+    }
+    @include tablet {
+      padding: 8.8rem 12.1rem !important;
+      border-radius: 2.4rem;
+      width: 100%;
+    }
+    @include small-tablet {
+      border-radius: 3.2rem;
+      padding: 2.4rem !important;
+    }
+  }
+
+  /* .application__input-box */
+
+  &__input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    @include small-tablet {
+      gap: 4rem;
+    }
+  }
+
+  /* .application__label */
+
+  &__label {
+  }
+
+  /* .application__form-input */
+
+  &__form-input {
+  }
+
+  /* .application__form-textarea */
+
+  &__form-textarea {
+  }
+
+  /* .application__btn */
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.8rem;
+    padding: 1.4rem 2.5rem;
+    background-color: $accent;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 140%;
+    color: $white;
+    transition: opacity 0.3s;
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    @include small-tablet {
+      border-radius: 3.6rem;
+      padding: 2.8rem 5rem;
+      font-size: 3.6rem;
+    }
+  }
+
+  /* .application__img */
+
+  &__img {
+    border-radius: 3.2rem;
+    width: 85.4rem;
+    height: auto;
+    min-height: 71.5rem;
+    background-color: $accent;
+    flex-shrink: 0;
+    @include tablet {
+      display: none;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

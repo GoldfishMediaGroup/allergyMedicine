@@ -28,7 +28,7 @@
             </p>
           </div>
 
-          <a href="#" class="popup__link txt18 txt18_medium"> Скачать Файл исследования </a>
+          <a href="#" class="popup__link txt18 txt18_medium">Скачать Файл исследования</a>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
   <div class="popup__wrapper">
     <div class="popup__content">
       <div class="popup__body">
-        <button data-close type="button" class="popup__body-close-btn">
+        <button data-close type="button" class="popup__body-close-btn" style="opacity: 0; visibility: hidden;">
           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262"
@@ -59,8 +59,36 @@
           </div>
           <div class="popup__btn-box">
             <button class="popup__btn popup__btn--yes" data-close>да</button>
-            <button class="popup__btn popup__btn-no" data-close>нет</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__success" aria-hidden="true" class="popup popup--success">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262"
+              stroke="#717378"
+              stroke-width="1.83466"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title tl4">Ваш вопрос принят</p>
+            <p class="popup__body-content-desk txt20">
+              Специалист отправит ответ в ближайшее время на указанный вами почтовый адрес
+            </p>
+          </div>
+
+          <a href="#" class="popup__link txt18 txt18_medium">Хорошо</a>
         </div>
       </div>
     </div>

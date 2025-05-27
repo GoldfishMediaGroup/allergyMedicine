@@ -16,6 +16,8 @@ import about from '../components/about';
 import history from '../components/history';
 import banner from '../components/banner';
 import disclamerModal from '../components/disclamerModal';
+import materialTable from '../components/material';
+import fancybox from '../utils/fancybox';
 
 export const modules = {};
 
@@ -52,6 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     disclamerModal();
   } catch {}
-
-
+  try {
+    materialTable();
+  } catch {}
+  try {
+    fancybox();
+  } catch {}
 });

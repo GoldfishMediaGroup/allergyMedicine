@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
     <title>Главная</title>
   <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
@@ -49,6 +50,8 @@
                 <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Где купить</a>
               </li>
             </ul>
+
+            <a href="#application" class="header__nav-btn txt18 txt18_medium accent-btn nav-link">Задать вопрос</a>
           </nav>
 
           <div class="header__nav-social-box mobile">
@@ -65,7 +68,7 @@
               <li class="header__nav-social-item">
                 <p class="header__nav-social-item-text">Почтовый адрес: 123182, г. Москва, а/я 4</p>
               </li>
-             
+
               <li class="header__nav-social-item">
                 <p class="header__nav-social-item-text">
                   Телефон:
@@ -75,8 +78,8 @@
               <li class="header__nav-social-item">
                 <p class="header__nav-social-item-text">
                   Электронная почта:
-  
-                  <a href="mailto:sales@bofarm.ru"> sales@bofarm.ru</a>
+
+                  <a href="mailto:sales@bofarm.ru">sales@bofarm.ru</a>
                 </p>
               </li>
             </ul>
@@ -112,7 +115,7 @@
             </p>
           </div>
 
-          <a href="#" class="popup__link txt18 txt18_medium"> Скачать Файл исследования </a>
+          <a href="#" class="popup__link txt18 txt18_medium">Скачать Файл исследования</a>
         </div>
       </div>
     </div>
@@ -123,7 +126,7 @@
   <div class="popup__wrapper">
     <div class="popup__content">
       <div class="popup__body">
-        <button data-close="" type="button" class="popup__body-close-btn">
+        <button data-close="" type="button" class="popup__body-close-btn" style="opacity: 0; visibility: hidden;">
           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
           </svg>
@@ -138,8 +141,31 @@
           </div>
           <div class="popup__btn-box">
             <button class="popup__btn popup__btn--yes" data-close="">да</button>
-            <button class="popup__btn popup__btn-no" data-close="">нет</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__success" aria-hidden="true" class="popup popup--success">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title tl4">Ваш вопрос принят</p>
+            <p class="popup__body-content-desk txt20">
+              Специалист отправит ответ в&nbsp;ближайшее время на&nbsp;указанный вами почтовый адрес
+            </p>
+          </div>
+
+          <a href="#" class="popup__link txt18 txt18_medium">Хорошо</a>
         </div>
       </div>
     </div>
@@ -153,9 +179,12 @@
     <div class="banner__inner">
       <div class="banner__content-box">
         <div class="banner__content-title-box">
-     
           <p class="banner__content-subtitle tl2">
-            Типрессин<sup>®</sup> - лечение <br> и профилактика заболеваний аллергического спектра.
+            Типрессин
+            <sup>®</sup>
+            - лечение
+            <br>
+            и профилактика заболеваний аллергического спектра.
           </p>
         </div>
         <ul class="banner__content-list">
@@ -168,7 +197,9 @@
               </div>
               <p class="banner__content-item-title txt20 txt20_medium">Первый препарат патогенетической терапии</p>
             </div>
-            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">подробнее</a>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
           </li>
           <li class="banner__content-item" data-mob-popup="#popup__characteristics2">
             <div class="banner__content-item-info-box">
@@ -179,7 +210,9 @@
               </div>
               <p class="banner__content-item-title txt20 txt20_medium">Первый препарат с доказанным профилактическим действием</p>
             </div>
-            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">подробнее</a>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
           </li>
           <li class="banner__content-item" data-mob-popup="#popup__characteristics1">
             <div class="banner__content-item-info-box">
@@ -189,11 +222,14 @@
                 </div>
               </div>
               <p class="banner__content-item-title txt20 txt20_medium">
-                Сочетает в себе системное <br>
+                Сочетает в себе системное
+                <br>
                 и местное действие
               </p>
             </div>
-            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">подробнее</a>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
           </li>
           <li class="banner__content-item">
             <div class="banner__content-item-info-box">
@@ -203,7 +239,8 @@
                 </div>
               </div>
               <p class="banner__content-item-title txt20 txt20_medium">
-                Отсутствие побочных <br>
+                Отсутствие побочных
+                <br>
                 эффектов
               </p>
             </div>
@@ -223,7 +260,10 @@
         </div>
         <div class="banner__info-text-box">
           <div class="banner__info-text-title-box">
-            <p class="banner__info-text-title tl4">Типрессин<sup>®</sup></p>
+            <p class="banner__info-text-title tl4">
+              Типрессин
+              <sup>®</sup>
+            </p>
             <p class="banner__info-text-desc txt16">
               отечественный инновационный лекарственный препарат для лечения и профилактики заболеваний аллергического спектра.
               Применяется как в монотерапии, так и в составе комбинированной терапии у взрослых и детей с 2-х летнего возраста.
@@ -423,8 +463,8 @@
                     <br>
                     Было установлено, что L-L и D-D - изомеры иммуномодулирующего дипептида Тимогена (L-Glu-L-Trp) (EW) и его
                     изомера [D-Glu-(gamma-Trp)] [ie(w)] различным образом влияют на популяцию стволовых клеток кроветворения:
-                    L-L-пептиды обладают гемостимулирующими свойствами, а D-D-пептиды – гемоингибирующими. Эти исследования
-                    позволили установить реципрокную зависимость действия изомеров Glu-Trp на иммунную и гемопоэтическую системы,
+                    L-L-пептиды обладают гемостимулирующими свойствами,а D-D-пептиды – гемоингибирующими. Эти исследования
+                    позволили установить реципрокную зависимость действия изомеров Glu-Trpна иммунную и гемопоэтическую системы,
                     а также взаимосвязь между биологическим действием, химической структурой и оптической активностью изомеров
                     пептидов.
                   </p>
@@ -585,7 +625,10 @@
         <section class="characteristics" id="characteristics">
   <div class="characteristics__container container">
     <div class="characteristics__inner">
-      <p class="characteristics__title tl2">Уникальные характеристики Типрессина<sup>®</sup></p>
+      <p class="characteristics__title tl2">
+        Уникальные характеристики Типрессина
+        <sup>®</sup>
+      </p>
       <div class="characteristics__content-box">
         <div class="characteristics__img-wrapper">
           <div class="characteristics__img-box">
@@ -601,7 +644,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 14.1rem; height: 9.3rem; left: 100%; top: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 14.1rem; height: 9.3rem; left: 100%; top: 50%">
               <img src="./assets/images/characteristics1.webp" alt="">
             </div>
           </li>
@@ -612,7 +655,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 19.9rem; height: 6.29rem; left: 100%; top: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 19.9rem; height: 6.29rem; left: 100%; top: 50%">
               <img src="./assets/images/characteristics2.webp" alt="">
             </div>
           </li>
@@ -623,7 +666,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 14.3rem; height: 6.77rem; left: 100%; bottom: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 14.3rem; height: 6.77rem; left: 100%; bottom: 50%">
               <img src="./assets/images/characteristics3.webp" alt="">
             </div>
           </li>
@@ -634,7 +677,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 13.9rem; height: 9.18rem; right: 100%; top: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 13.9rem; height: 9.18rem; right: 100%; top: 50%">
               <img src="./assets/images/characteristics5.webp" alt="">
             </div>
           </li>
@@ -645,7 +688,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 20.2rem; height: 11.875rem; right: 100%; top: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 20.2rem; height: 11.875rem; right: 100%; top: 50%">
               <img src="./assets/images/characteristics4.webp" alt="">
             </div>
           </li>
@@ -656,7 +699,7 @@
                 <img src="./assets/images/plus.svg" alt="">
               </div>
             </button>
-            <div class="characteristics__item-img-box desktop" style="width: 16.4rem; height: 9.1rem; right: 100%; bottom: 50%;">
+            <div class="characteristics__item-img-box desktop" style="width: 16.4rem; height: 9.1rem; right: 100%; bottom: 50%">
               <img src="./assets/images/characteristics6.webp" alt="">
             </div>
           </li>
@@ -669,7 +712,6 @@
         <section class="about" id="about">
   <div class="about__container container">
     <div class="about__inner">
-
       <div class="about__swiper-box">
         <div class="about__swiper swiper">
           <div class="about__swiper-wrapper swiper-wrapper">
@@ -698,7 +740,10 @@
       </div>
 
       <div class="about__text-box">
-        <p class="about__title tl2">Типрессин<sup>®</sup></p>
+        <p class="about__title tl2">
+          Типрессин
+          <sup>®</sup>
+        </p>
         <p class="about__text txt20">
           Отечественный инновационный лекарственный препарат для лечения и профилактики заболеваний аллергического спектра.
           Применяется как в монотерапии, так и в составе комбинированной терапии у взрослых и детей с 2-х летнего возраста.
@@ -708,27 +753,27 @@
       <ul class="about__list">
         <li class="about__item">
           <p class="about__item-title tl4">регистрационное удостоверение</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
         <li class="about__item">
           <p class="about__item-title tl4">Инструкция по применению</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
         <li class="about__item">
           <p class="about__item-title tl4">Патент</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
         <li class="about__item">
           <p class="about__item-title tl4">Исследования</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
         <li class="about__item">
           <p class="about__item-title tl4">Презентации препарата</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
         <li class="about__item">
           <p class="about__item-title tl4">Статьи по теме</p>
-          <a href="#" class="about__item-link txt18 txt18_medium">подробнее</a>
+          <a href="#" class="about__item-link accent-btn txt18 txt18_medium">подробнее</a>
         </li>
       </ul>
     </div>
@@ -738,9 +783,11 @@
         <section class="where" id="where">
   <div class="where__container container">
     <div class="where__inner">
-      <p class="where__title tl2">Где купить Типрессин<sup>®</sup></p>
+      <p class="where__title tl2">
+        Где купить Типрессин
+        <sup>®</sup>
+      </p>
       <ul class="where__list">
-
         <li class="where__item">
           <a href="#" class="where__link">
             <div class="where__img-box">
@@ -786,17 +833,71 @@
   </div>
 </section>
 
+        <section class="application" id="application">
+  <div class="application__container container">
+    <div class="application__inner">
+      <p class="application__title tl2">Есть вопросы? Напишите нам</p>
+      <div class="application__body">
+        <form class="application__form form" data-popup-message="#popup__success" data-dev="" action="">
+          <div class="application__input-box">
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input class="input--name form__input" type="text" data-validate="" data-required="name" autocomplete="off" name="form[]" placeholder="Введите имя">
+                <span class="form__input-placeholder">Имя</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input class="input--mail form__input" type="text" data-validate="" data-required="email" autocomplete="off" name="form[]" placeholder="Введите email">
+                <span class="form__input-placeholder">Email</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper form__input-wrapper--textarea txt20">
+                <div class="form__textarea-wrapper">
+                  <textarea class="form__textarea application__form-textarea" name="form[]" placeholder="E-mail"></textarea>
+                </div>
+              </span>
+              <span class="form__textarea-span form__absolute-span" data-length="450">
+                Осталось
+                <span></span>
+                символов
+              </span>
+            </label>
+
+            <div id="captcha-container" class="smart-captcha" data-sitekey="">
+              <input type="hidden" name="smart-token" value="">
+            </div>
+          </div>
+
+          <button disabled="" type="submit" class="application__btn">Отправить</button>
+        </form>
+
+        <div class="application__img">
+          <img src="./assets/images/materialsImg/applicationPhoto.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       </main>
       <div class="cookie cookie--show">
   <div class="cookie__container container">
     <div class="cookie__inner">
       <div class="cookie__text-box">
         <p class="cookie__text txt20">
-          АО «ОТИСИФАРМ» использует файлы <a href="#">cookie</a>, чтобы настоящий веб-сайт работал для Вас быстрее и эффективнее.
+          АО «ОТИСИФАРМ» использует файлы
+          <a href="#">cookie</a>
+          , чтобы настоящий веб-сайт работал для Вас быстрее и эффективнее.
         </p>
 
         <div class="cookie__link-box">
-          <a href="#" class="cookie__link">Политика использования файлов Cookie АО «ОТИСИФАРМ» </a>
+          <a href="#" class="cookie__link">Политика использования файлов Cookie АО «ОТИСИФАРМ»</a>
         </div>
       </div>
 
@@ -881,10 +982,9 @@
               <p class="footer__nav-social-item-text">
                 Электронная почта:
 
-                <a href="mailto:sales@bofarm.ru"> sales@bofarm.ru</a>
+                <a href="mailto:sales@bofarm.ru">sales@bofarm.ru</a>
               </p>
             </li>
-        
           </ul>
         </div>
 
@@ -906,6 +1006,7 @@
   </div>
 </footer>
 
+<div class="fancybox-bg"></div>
     </div>
   </body>
 </html>
