@@ -54,8 +54,19 @@
               <input type="hidden" name="smart-token" value="" />
             </div>
           </div>
-
-          <button disabled type="submit" class="application__btn" >Отправить</button>
+          <div class="application__btn-box">
+            <label class="application__agreement-label">
+              <input type="checkbox" class="application__agreement-checkbox" />
+              <span class="application__agreement-square"></span>
+              <span class="application__agreement-text txt16">
+                Соглашаюсь на 
+                <a href="#">Обработку персональных данных</a>
+                и принимаю
+                <a href="#">Условия политики конфиденциальности</a>
+              </span>
+            </label>
+            <button disabled type="submit" class="application__btn">Отправить</button>
+          </div>
         </form>
 
         <div class="application__img">

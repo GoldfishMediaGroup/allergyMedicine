@@ -43,7 +43,7 @@
 
   &__form {
     border-radius: 3.2rem;
-    padding: 10.2rem 20.4rem;
+    padding: 7rem 20.4rem;
     background: $gray;
     display: flex;
     flex-direction: column;
@@ -53,10 +53,10 @@
     gap: 3rem;
     width: 85.4rem;
     @media (max-width: 1280px) {
-      padding: 10.2rem 15.4rem;
+      padding: 7rem 15.4rem;
     }
     @include tablet {
-      padding: 8.8rem 12.1rem !important;
+      padding: 6rem 12.1rem !important;
       border-radius: 2.4rem;
       width: 100%;
     }
@@ -135,6 +135,93 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  /* .application__btn-box */
+
+  &__btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include small-tablet {
+      gap: 3.2rem;
+    }
+  }
+
+  /* .application__agreement-label */
+
+  &__agreement-label {
+    display: flex;
+    gap: 1.2rem;
+    cursor: pointer;
+    @include tablet {
+      gap: 1rem;
+    }
+    @include small-tablet {
+      gap: 1.2rem;
+    }
+  }
+
+  /* .application__agreement-checkbox */
+
+  &__agreement-checkbox {
+    position: absolute;
+    opacity: 0;
+    inset: 1;
+    z-index: -1;
+    display: block;
+    &:checked ~ .application__agreement-square {
+      background: $accent;
+    }
+  }
+
+  /* .application__agreement-square */
+
+  &__agreement-square {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    border: 0.1rem solid $accent;
+    background: $white;
+    transition: background 0.3s;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include small-tablet {
+      width: 4rem;
+      height: 4rem;
+      border: 0.2rem solid $accent;
+      border-radius: 0.8rem;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2217%22%20viewBox%3D%220%200%2016%2017%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6.36646%2010.6L12.0165%204.95C12.1498%204.81667%2012.3054%204.75%2012.4831%204.75C12.6609%204.75%2012.8165%204.81667%2012.9498%204.95C13.0831%205.08333%2013.1498%205.24178%2013.1498%205.42533C13.1498%205.60889%2013.0831%205.76711%2012.9498%205.9L6.83313%2012.0333C6.69979%2012.1667%206.54424%2012.2333%206.36646%2012.2333C6.18868%2012.2333%206.03313%2012.1667%205.89979%2012.0333L3.03313%209.16667C2.89979%209.03333%202.83579%208.87511%202.84113%208.692C2.84646%208.50889%202.91602%208.35044%203.04979%208.21667C3.18357%208.08289%203.34202%208.01622%203.52513%208.01667C3.70824%208.01711%203.86646%208.08378%203.99979%208.21667L6.36646%2010.6Z%22%20fill%3D%22white%22/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      @include small-tablet {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+  }
+
+  /* .application__agreement-text */
+
+  &__agreement-text {
+    @include tablet {
+      font-size: 1.4rem;
+    }
+    @include small-tablet {
+      font-size: 2.4rem;
+    }
+    & a {
+      text-decoration: underline;
     }
   }
 }
