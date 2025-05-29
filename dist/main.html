@@ -7,7 +7,7 @@
     <title>Главная</title>
   <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
-    <div class="wrapper entrance">
+    <div class="wrapper ">
       <header class="header" id="header">
   <div class="header__container container">
     <div class="header__inner">
@@ -873,8 +873,20 @@
               <input type="hidden" name="smart-token" value="">
             </div>
           </div>
+          <div class="application__btn-box">
+            <label class="application__agreement-label">
+              <input type="checkbox" class="application__agreement-checkbox">
+              <span class="application__agreement-square"></span>
+              <span class="application__agreement-text txt16">
+                Соглашаюсь на&nbsp;
+                <a href="#">Обработку персональных данных</a>
+                и&nbsp;принимаю
+                <a href="#">Условия политики конфиденциальности</a>
+              </span>
+            </label>
 
-          <button disabled="" type="submit" class="application__btn">Отправить</button>
+            <button disabled="" type="submit" class="application__btn">Отправить</button>
+          </div>
         </form>
 
         <div class="application__img">
