@@ -33,7 +33,7 @@
       <include src="./components/_footer.html"></include>
     </div>
 
-    <script type="module">
+    <!-- <script type="module">
       import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs';
 
       pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
@@ -67,8 +67,47 @@
           viewer.innerHTML = 'Ошибка загрузки PDF.';
           console.error(error);
         });
-    </script>
+    </script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+      const url = './assets/images/file_1.pdf'; // ← Укажи путь к PDF
+
+      const viewer = document.getElementById('pdfViewer');
+
+      pdfjsLib
+        .getDocument(url)
+        .promise.then(function (pdf) {
+          viewer.innerHTML = ''; // Очистить "Загрузка PDF"
+
+          for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            pdf.getPage(pageNum).then(function (page) {
+              const scale = 1.5;
+              const viewport = page.getViewport({ scale });
+
+              const canvas = document.createElement('canvas');
+              const context = canvas.getContext('2d');
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
+
+              page
+                .render({
+                  canvasContext: context,
+                  viewport: viewport
+                })
+                .promise.then(function () {
+                  viewer.appendChild(canvas);
+                });
+            });
+          }
+        })
+        .catch(function (error) {
+          viewer.innerHTML = 'Ошибка загрузки PDF.';
+          console.error('PDF.js error:', error);
+        });
+    </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.12/pdfobject.min.js"></script>
 
     <script>
