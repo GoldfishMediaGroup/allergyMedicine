@@ -27,14 +27,18 @@
 #pdfViewer {
   width: 100%;
   min-height: 100vh;
-  background: $white;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+
   @include tablet {
     & canvas {
-      width: 100% !important;
+      width: 100% !important;   
     }
+
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
 }
