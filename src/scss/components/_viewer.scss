@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: 3rem;
+  margin: 3rem auto;
   /* .viewer__back */
 
   &__back {
@@ -26,6 +26,15 @@
 
 #pdfViewer {
   width: 100%;
+  min-height: 100vh;
+  background: $white;
   display: flex;
-  flex-direction: column;
+  @include tablet {
+    & canvas {
+      width: 100% !important;
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
