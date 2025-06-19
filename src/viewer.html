@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Исследования</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+
+      <main>
+        <section class="viewer container">
+          <a href="#" class="viewer__back">
+            <div class="viewer__back-img">
+              <img src="./assets/images/materialsImg/backLinkSvg.svg" alt="" />
+            </div>
+            <p class="tl3">Назад</p>
+          </a>
+          <!-- <iframe
+            data-lenis-prevent="true"
+            src="https://tipressin.ru/files/file_1.pdf"
+            width="100%"
+            style="border: none"
+          ></iframe> -->
+
+          <div id="pdfViewer"></div>
+        </section>
+      </main>
+      <!-- <include src="./components/_cookie.html"></include>
+      <include src="./components/_disclaimer.html"></include> -->
+      <include src="./components/_footer.html"></include>
+    </div>
+
+    <script type="module">
+      import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs';
+
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
+
+      const url = './assets/images/file_1.pdf'; // Заменить на путь к реальному PDF
+
+      const viewer = document.getElementById('pdfViewer');
+
+      const loadingTask = pdfjsLib.getDocument(url);
+      loadingTask.promise
+        .then((pdf) => {
+          viewer.innerHTML = '';
+
+          for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            pdf.getPage(pageNum).then((page) => {
+              const scale = 1.5;
+              const viewport = page.getViewport({ scale });
+
+              const canvas = document.createElement('canvas');
+              const context = canvas.getContext('2d');
+              canvas.width = viewport.width;
+              canvas.height = viewport.height;
+
+              page.render({ canvasContext: context, viewport }).promise.then(() => {
+                viewer.appendChild(canvas);
+              });
+            });
+          }
+        })
+        .catch((error) => {
+          viewer.innerHTML = 'Ошибка загрузки PDF.';
+          console.error(error);
+        });
+    </script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.12/pdfobject.min.js"></script>
+
+    <script>
+      PDFObject.embed('https://tipressin.ru/files/file_1.pdf', '#pdf-viewer');
+    </script> -->
+  </body>
+</html>

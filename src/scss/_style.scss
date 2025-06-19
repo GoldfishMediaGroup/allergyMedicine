@@ -38,11 +38,8 @@ body {
     touch-action: none;
   }
   &.no-scroll {
-    height: 100vh;
-    height: 100dvh;
     overflow: hidden !important;
     touch-action: none !important;
-    position: fixed;
     width: 100vw;
   }
 }

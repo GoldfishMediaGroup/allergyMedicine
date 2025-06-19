@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Исследования</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+
+      <main>
+        <section class="viewer container">
+          <a href="#" class="viewer__back">
+            <div class="viewer__back-img">
+              <img src="./assets/images/materialsImg/backLinkSvg.svg" alt="" />
+            </div>
+            <p class="tl3">Назад</p>
+          </a>
+          <iframe
+            data-lenis-prevent="true"
+            src="https://tipressin.ru/files/file_1.pdf"
+            width="100%"
+            style="border: none; height: 90vh"
+          ></iframe>
+
+          <div id="pdfViewer"></div>
+        </section>
+      </main>
+      <!-- <include src="./components/_cookie.html"></include>
+      <include src="./components/_disclaimer.html"></include> -->
+      <include src="./components/_footer.html"></include>
+    </div>
+  </body>
+</html>
