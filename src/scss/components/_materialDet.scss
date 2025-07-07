@@ -1013,14 +1013,26 @@
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+    word-wrap: break-word;
+  }
 
   @include tablet {
     width: 100%;
+    font-size: 1.6rem;
     gap: 5.6rem;
   }
   @include small-tablet {
     gap: 8rem;
+    font-size: 2.8rem;
   }
+
+
 
   /* .material-body__block */
 
@@ -1036,6 +1048,7 @@
       font-size: 4.4rem;
     }
   }
+  & h3,
   & h4 {
     font-weight: 500;
     font-size: 2.4rem;
@@ -1049,23 +1062,10 @@
       font-size: 3.2rem;
     }
   }
-  & p,
-  & li {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 150%;
-    a {
-      text-decoration: underline;
-      font-weight: 500;
-      word-wrap: break-word;
-    }
-    @include tablet {
-      font-size: 1.6rem;
-    }
-    @include small-tablet {
-      font-size: 2.8rem;
-    }
-  }
+  // & p,
+  // & li {
+
+  // }
 
   &__desc {
     & h2 {
@@ -1082,6 +1082,7 @@
       }
     }
 
+    & h3,
     & h4 {
       margin: 2.8rem 0 2rem;
 
@@ -1094,7 +1095,8 @@
       }
     }
 
-    & p {
+    & p,
+    & > span {
       margin: 2rem 0;
       @include tablet {
         margin: 1.2rem 0;
