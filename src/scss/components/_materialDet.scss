@@ -1081,6 +1081,73 @@
         margin-top: 0 !important;
       }
     }
+    & .material-body__table-wrapper {
+      margin: 4rem 0;
+    }
+    & table {
+      // width: 100%;
+      // overflow: hidden;
+      // width: 100%;
+      // display: flex;
+      // flex-direction: column;
+      // user-select: none;
+      // cursor: grab;
+      & tbody {
+        width: fit-content;
+      }
+
+      & tr {
+        width: fit-content;
+        align-items: center;
+
+        // padding: 10rem 0;
+        min-width: 100%;
+
+        &:nth-child(odd) {
+          background: $gray;
+        }
+        &:nth-child(even) {
+          background: $white;
+        }
+
+        &:first-of-type {
+          background: $accent !important;
+          & p {
+            min-width: 25rem;
+            padding: 2.8rem 1.8rem 3.6rem;
+            color: $white;
+            @include tablet {
+              padding: 2.4rem 1.7rem;
+              min-width: 17rem;
+            }
+            @include small-tablet {
+              padding: 2.4rem 1.6rem;
+              min-width: 22rem;
+              & p {
+                font-size: 2.4rem;
+              }
+            }
+          }
+        }
+
+        & p {
+          min-width: 25rem;
+          padding: 2.2rem 1.8rem 2.8rem;
+          margin: 0rem;
+          @include tablet {
+            padding: 2.4rem 1.7rem;
+            min-width: 17rem;
+          }
+          @include small-tablet {
+            padding: 2.4rem 1.6rem;
+            min-width: 22rem;
+            & p {
+              font-size: 2.4rem;
+            }
+          }
+        }
+      }
+    }
 
     & h3,
     & h4 {
@@ -1119,7 +1186,8 @@
         flex-direction: column;
         gap: 1.6rem;
       }
-      & img, & a {
+      & img,
+      & a {
         display: block;
         border-radius: 1.6rem;
         width: 58.6rem;
@@ -1650,6 +1718,59 @@
       @include tablet {
         font-size: 3.6rem;
       }
+    }
+  }
+}
+
+.material-body__table {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  cursor: grab;
+  &.dragging {
+    cursor: grabbing;
+  }
+  &-wrapper {
+    position: relative;
+    border-radius: 2.4rem;
+    overflow: hidden;
+    @include tablet {
+      border-radius: 1.6rem;
+    }
+    @include small-tablet {
+      border-radius: 2.4rem;
+    }
+  }
+  &-scrollbar {
+    position: absolute;
+    bottom: 0.4rem;
+    left: 1.8rem;
+    right: 1.8rem;
+    height: 0.3rem;
+    &.is-hidden {
+      opacity: 0;
+    }
+    @include small-tablet {
+      bottom: 0.8rem;
+      left: 2.6rem;
+      right: 2.6rem;
+      height: 0.4rem;
+    }
+  }
+
+  &-scrollbar-thumb {
+    height: 100%;
+
+    background: rgba(57, 60, 67, 0.7);
+    border-radius: 6rem;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    transition: background 0.3s;
+    &:hover {
+      background: #555;
     }
   }
 }
