@@ -34,6 +34,7 @@
       padding: 3.2rem 46.1rem 3rem 10rem;
       gap: 8rem;
       min-height: 57.4rem;
+
       & .breadcrumbs li {
         color: $white;
       }
@@ -172,6 +173,7 @@
     border-radius: 4rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   /* .material-head__content */
@@ -1032,8 +1034,6 @@
     font-size: 2.8rem;
   }
 
-
-
   /* .material-body__block */
 
   & h2 {
@@ -1119,7 +1119,8 @@
         flex-direction: column;
         gap: 1.6rem;
       }
-      & img {
+      & img, & a {
+        display: block;
         border-radius: 1.6rem;
         width: 58.6rem;
         height: 34.5rem;
