@@ -3,6 +3,40 @@ window.$ = window.jQuery = require('jquery');
 
 function material() {
   function materialTable() {
+    let tablesItems = document.querySelectorAll('.material-body__desc table');
+
+    if (tablesItems.length) {
+      for (let i = 0; i < tablesItems.length; i++) {
+        let table = tablesItems[i];
+
+        // Пропускаем, если уже обёрнута
+        if (table.closest('.material-body__table-wrapper')) continue;
+
+        // Создаём обёртку
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('material-body__table-wrapper');
+
+        const tableBlock = document.createElement('div');
+        tableBlock.classList.add('material-body__table');
+
+        // Создаём scrollbar
+        const scrollbar = document.createElement('div');
+        scrollbar.classList.add('material-body__table-scrollbar');
+
+        const scrollbarThumb = document.createElement('div');
+        scrollbarThumb.classList.add('material-body__table-scrollbar-thumb');
+
+        scrollbar.appendChild(scrollbarThumb);
+
+        // Вставляем wrapper на место таблицы
+        table.parentElement.insertBefore(wrapper, table);
+        wrapper.appendChild(tableBlock);
+        tableBlock.appendChild(table);
+        wrapper.appendChild(scrollbar);
+      }
+
+    }
+
     const tables = document.querySelectorAll('.material-body__table-wrapper');
 
     tables.forEach((tableWrapper) => {
