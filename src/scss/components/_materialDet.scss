@@ -1131,6 +1131,11 @@
     margin: 4rem 0;
   }
   & table {
+    border: none !important;
+    width: 100%;
+    & * {
+      border: none !important;
+    }
     & tbody {
       width: fit-content;
     }
@@ -1152,7 +1157,7 @@
       &:first-of-type {
         background: $accent !important;
         & p {
-        min-width: 10rem;
+          min-width: 10rem;
           padding: 2.8rem 1.8rem 3.6rem;
           color: $white;
           @include tablet {
@@ -1206,7 +1211,7 @@
       border-radius: 1.6rem;
       width: 58.6rem;
       height: 34.5rem;
-      object-fit: cover;
+      object-fit: contain;
       @include tablet {
         border-radius: 1.2rem;
         width: 33.8rem;
@@ -1678,4 +1683,3 @@
     }
   }
 }
-
