@@ -1212,6 +1212,7 @@
       width: 58.6rem;
       height: 34.5rem;
       object-fit: contain;
+      background: $accent;
       @include tablet {
         border-radius: 1.2rem;
         width: 33.8rem;
