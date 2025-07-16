@@ -113,7 +113,7 @@ function headerBurger() {
   
     // Закрытие бургер-меню при клике на ссылку
     navWrapper.addEventListener('click', (e) => {
-      if (e.target.classList.contains('header__nav-link')) {
+      if (e.target.classList.contains('header__nav-link') || e.target.classList.contains('header__nav-btn') ) {
         closeBurger();
       }
     });
