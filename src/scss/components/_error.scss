@@ -1,0 +1,212 @@
+.error500 {
+  /* .error500__inner */
+
+  &__inner {
+    padding: 12.7rem 31.2rem;
+    background-color: $accent;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    min-height: 74rem;
+    border-radius: 4rem;
+    @include tablet {
+      flex-direction: column;
+      flex-direction: column-reverse;
+      padding: 6rem 6rem 0 6rem;
+      min-height: auto;
+      border-radius: 3.3rem;
+      gap: 6.4rem;
+    }
+    @include small-tablet {
+      padding: 2.2rem 8rem 0 8rem;
+      border-radius: 3.2rem;
+      gap: 4rem;
+    }
+  }
+
+  /* .error500__img */
+
+  &__img {
+    position: absolute;
+    left: 26.4rem;
+    bottom: 0;
+    width: 65rem;
+    height: 70rem;
+    @include tablet {
+      position: static;
+      width: 50.5rem;
+      height: 55rem;
+    }
+    @include small-tablet {
+      width: 51.8rem;
+      height: 56.4rem;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* .error500__content */
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3.4rem;
+    width: 53rem;
+    @include tablet {
+      width: 100%;
+    }
+    @include small-tablet {
+      gap: 4.8rem;
+    }
+  }
+
+  /* .error500__title */
+
+  &__title {
+    font-weight: 300;
+    font-size: 32rem;
+    line-height: 85%;
+    color: $white;
+    @include tablet {
+      font-size: 20rem;
+    }
+    @include small-tablet {
+      font-size: 24rem;
+    }
+  }
+}
+
+.error404 {
+  /* .error404__inner */
+
+  &__inner {
+    padding: 9.7rem;
+    background-color: $accent;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 74rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    @include tablet {
+      height: 99.1rem;
+      border-radius: 3.3rem;
+    }
+    @include small-tablet {
+      border-radius: 3.2rem;
+            height: 108rem;
+    }
+  }
+
+  /* .error404__bg */
+
+  &__bg {
+    position: absolute;
+    width: 107rem;
+    height: 91.4rem;
+    top: -45.8rem;
+    right: 0rem;
+
+    @include tablet {
+      width: 61.4rem;
+      height: 52.4rem;
+      top: -1rem;
+      right: -15rem;
+    }
+    @include small-tablet {
+      top: -1em;
+            right: -16rem;
+    }
+  }
+
+  /* .error404__content */
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.4rem;
+    text-align: center;
+  }
+  /* .error404__title */
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 37rem;
+    @include tablet {
+      gap: 20rem;
+    }
+    @include small-tablet {
+      font-size: 24rem;
+    }
+  }
+
+  /* .error404__num */
+
+  &__num {
+    font-weight: 300;
+    font-size: 40rem;
+    line-height: 80%;
+    color: $white;
+    @include tablet {
+      font-size: 20rem;
+    }
+    @include small-tablet {
+      font-size: 24rem;
+    }
+  }
+
+  &__desc {
+    width: 53rem;
+    @include tablet {
+      width: 45.6rem;
+    }
+    @include small-tablet {
+      width: 55.6rem;
+    }
+  }
+}
+
+.error {
+  /* .error__back */
+  &__desc {
+    text-transform: uppercase;
+    color: $white;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include small-tablet {
+      font-size: 3.2rem;
+    }
+  }
+  &__back {
+    border: 0.1rem solid $white;
+    background-color: $white;
+    text-align: center;
+    color: $accent;
+    padding: 1.2rem 2.5rem;
+    border-radius: 1.8rem;
+    transition: scale 0.3s;
+    @include tablet {
+      font-size: 1.8rem;
+    }
+    @include small-tablet {
+      padding: 2rem 6.6rem;
+      border-radius: 2.4rem;
+      font-size: 3.2rem;
+    }
+    &:hover {
+      scale: 1.03;
+    }
+  }
+}

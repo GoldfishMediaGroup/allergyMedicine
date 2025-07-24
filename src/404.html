@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+    <title>Главная</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+
+      <main>
+        <section class="error404 _first">
+          <div class="container">
+            <div class="error404__inner">
+              <div class="error404__bg">
+                <img src="./assets/images/error/404.webp" alt="" />
+              </div>
+              <div class="error404__content">
+                <div class="error404__title">
+                  <p class="error404__num">4</p>
+                  <p class="error404__num">4</p>
+                </div>
+
+                <p class="error404__desc error__desc tl3">К сожалению, такой страницы не существует</p>
+                <a href="" class="error__back txt18">На главную</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <include src="./components/_footer.html"></include>
+    </div>
+  </body>
+</html>
