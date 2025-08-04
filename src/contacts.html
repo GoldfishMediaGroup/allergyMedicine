@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&apikey=7731b8ff-e849-4004-895f-8391de3dea25"></script> -->
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+    <title>Главная</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+
+      <main>
+        <section class="contacts _first">
+          <div class="container">
+            <div class="contacts__map" id="contacts-map"></div>
+          </div>
+        </section>
+      </main>
+
+      <include src="./components/_footer.html"></include>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initMap();
+
+      // mapDelivery();
+    });
+    async function initMap() {
+      if (typeof ymaps3 !== 'undefined') {
+        await ymaps3.ready;
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+
+        let map = new YMap(
+          document.getElementById('contacts-map'),
+
+          {
+            location: {
+              center: [37.628144, 55.733842],
+              zoom: 12
+            }
+          },
+          [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
+        );
+
+        const markerElement = document.createElement('img');
+        markerElement.className = 'contacts__map-icon';
+        markerElement.src = './assets/images/map-icon.svg';
+        map.addChild(new YMapMarker({ coordinates: [37.588144, 55.733842] }, markerElement));
+         map.setBehaviors(['drag', 'dblClick', 'mouseRotate'],);
+      }
+    }
+
+    //     const mapDelivery = () => {
+    //     function init() {
+    //         const mapContainer = document.getElementById('contacts-map');
+    //         if (!mapContainer || typeof ymaps === 'undefined') return;
+
+    //         function getMapCenter() {
+    //             switch (true) {
+    //                 case window.innerWidth >= 1601:
+    //                     return [55.915019, 37.758016];
+    //                 case window.innerWidth >= 1024:
+    //                     return [55.915019, 37.754016];
+    //                 default:
+    //                     return [55.914216, 37.747595];
+    //             }
+    //         }
+
+    //         function updateMapBehavior(map) {
+    //             if (window.innerWidth < 1024) {
+    //                 map.behaviors.disable('drag');
+    //             } else {
+    //                 map.behaviors.enable('drag');
+    //             }
+    //         }
+
+    //         let map = new ymaps.Map('contacts-map', {
+    //             center: getMapCenter(),
+    //             zoom: 16
+    //         });
+    //         updateMapBehavior(map);
+    //         // при ресайзе обновляем центр
+    //         window.addEventListener('resize', () => {
+    //             map.setCenter(getMapCenter());
+    //             updateMapBehavior(map);
+    //         });
+
+    //         let placemark = new ymaps.Placemark(
+    //             [55.914216, 37.747595],
+    //             {},
+    //             {
+    //                 iconLayout: 'default#image',
+    //                 iconImageHref: './assets/images/map-icon.svg',
+    //                 iconImageSize: [52, 68],
+    //                 iconImageOffset: [-52, -68]
+    //             }
+    //         );
+
+    //         map.controls.remove('geolocationControl');
+    //         map.controls.remove('searchControl');
+    //         map.controls.remove('trafficControl');
+    //         map.controls.remove('typeSelector');
+    //         map.controls.remove('fullscreenControl');
+    //         map.controls.remove('zoomControl');
+    //         map.controls.remove('rulerControl');
+
+    //         // map.behaviors.disable('scrollZoom'); // отключает zoom колесом
+
+    //         map.geoObjects.add(placemark);
+    //     }
+    //     ymaps.ready(init);
+    // };
+  </script>
+</html>

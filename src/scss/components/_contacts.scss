@@ -1,0 +1,21 @@
+.contacts {
+  &__map {
+    border-radius: 6rem;
+    overflow: hidden;
+    width: 89.6rem;
+    min-width: 89.6rem;
+    height: 68rem;
+
+    &-icon {
+      width: 6rem;
+      height: 9rem;
+      position: relative;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-100%, -100%);
+
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  }
+}

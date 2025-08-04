@@ -277,7 +277,7 @@
   &__nav-btn {
     padding: 1.4rem 4rem;
     margin-right: 6rem;
-       @include tablet {
+    @include tablet {
       margin-right: 0;
     }
   }
@@ -285,6 +285,11 @@
   /* .header__nav-item */
 
   &__nav-item {
+    @include tablet {
+      &.mobile {
+        display: flex;
+      }
+    }
   }
 
   /* .header__nav-link */
