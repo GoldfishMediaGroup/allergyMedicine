@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
 
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&apikey=7731b8ff-e849-4004-895f-8391de3dea25"></script> -->
     <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
     <title>Главная</title>
   </head>
@@ -17,7 +16,52 @@
       <main>
         <section class="contacts _first">
           <div class="container">
-            <div class="contacts__map" id="contacts-map"></div>
+            <div class="contacts__inner">
+              <div class="contacts__info">
+                <p class="tl2">Контакты</p>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <div class="contacts__item-img">
+                      <img src="./assets/images/contacts/1.svg" alt="">
+                    </div>
+                    <div class="contacts__item-text">
+                      <p class="contacts__item-title txt20 txt20_medium">Компания</p>
+                      <p class="contacts__item-desc txt16">АО «Бофарм»</p>
+                    </div>
+                  </li>
+                  <li class="contacts__item">
+                    <div class="contacts__item-img">
+                      <img src="./assets/images/contacts/2.svg" alt="">
+                    </div>
+                    <div class="contacts__item-text">
+                      <p class="contacts__item-title txt20 txt20_medium">Юридический адрес</p>
+                      <p class="contacts__item-desc txt16">
+                        141191, Московская область, г. Фрязино,ул. Станционная, д. 2, строение 10, этаж 1, пом. 127
+                      </p>
+                    </div>
+                  </li>
+                  <li class="contacts__item">
+                    <div class="contacts__item-img">
+                      <img src="./assets/images/contacts/3.svg" alt="">
+                    </div>
+                    <div class="contacts__item-text">
+                      <p class="contacts__item-title txt20 txt20_medium">Почтовый адрес</p>
+                      <p class="contacts__item-desc txt16">123182, г. Москва, а/я 4</p>
+                    </div>
+                  </li>
+                  <li class="contacts__item">
+                    <div class="contacts__item-img">
+                      <img src="./assets/images/contacts/4.svg" alt="">
+                    </div>
+                    <div class="contacts__item-text">
+                      <p class="contacts__item-title txt20 txt20_medium">Электронная почта:</p>
+                      <p class="contacts__item-desc txt16"><a href="mailto:tipressin@mail.ru">tipressin@mail.ru</a></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts__map" id="contacts-map"></div>
+            </div>
           </div>
         </section>
       </main>
@@ -28,8 +72,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initMap();
-
-      // mapDelivery();
     });
     async function initMap() {
       if (typeof ymaps3 !== 'undefined') {
@@ -41,80 +83,19 @@
 
           {
             location: {
-              center: [37.628144, 55.733842],
-              zoom: 12
+              center: [37.76016836436462, 55.835289665270864],
+              zoom: 9
             }
           },
           [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
         );
 
         const markerElement = document.createElement('img');
-        markerElement.className = 'contacts__map-icon';
-        markerElement.src = './assets/images/map-icon.svg';
-        map.addChild(new YMapMarker({ coordinates: [37.588144, 55.733842] }, markerElement));
-         map.setBehaviors(['drag', 'dblClick', 'mouseRotate'],);
+        markerElement.className = 'contacts__placemark';
+        markerElement.src = './assets/images/contacts/placemark.svg';
+        map.addChild(new YMapMarker({ coordinates: [38.030932, 55.962458] }, markerElement));
+        map.setBehaviors(['drag', 'dblClick', 'mouseRotate']);
       }
     }
-
-    //     const mapDelivery = () => {
-    //     function init() {
-    //         const mapContainer = document.getElementById('contacts-map');
-    //         if (!mapContainer || typeof ymaps === 'undefined') return;
-
-    //         function getMapCenter() {
-    //             switch (true) {
-    //                 case window.innerWidth >= 1601:
-    //                     return [55.915019, 37.758016];
-    //                 case window.innerWidth >= 1024:
-    //                     return [55.915019, 37.754016];
-    //                 default:
-    //                     return [55.914216, 37.747595];
-    //             }
-    //         }
-
-    //         function updateMapBehavior(map) {
-    //             if (window.innerWidth < 1024) {
-    //                 map.behaviors.disable('drag');
-    //             } else {
-    //                 map.behaviors.enable('drag');
-    //             }
-    //         }
-
-    //         let map = new ymaps.Map('contacts-map', {
-    //             center: getMapCenter(),
-    //             zoom: 16
-    //         });
-    //         updateMapBehavior(map);
-    //         // при ресайзе обновляем центр
-    //         window.addEventListener('resize', () => {
-    //             map.setCenter(getMapCenter());
-    //             updateMapBehavior(map);
-    //         });
-
-    //         let placemark = new ymaps.Placemark(
-    //             [55.914216, 37.747595],
-    //             {},
-    //             {
-    //                 iconLayout: 'default#image',
-    //                 iconImageHref: './assets/images/map-icon.svg',
-    //                 iconImageSize: [52, 68],
-    //                 iconImageOffset: [-52, -68]
-    //             }
-    //         );
-
-    //         map.controls.remove('geolocationControl');
-    //         map.controls.remove('searchControl');
-    //         map.controls.remove('trafficControl');
-    //         map.controls.remove('typeSelector');
-    //         map.controls.remove('fullscreenControl');
-    //         map.controls.remove('zoomControl');
-    //         map.controls.remove('rulerControl');
-
-    //         // map.behaviors.disable('scrollZoom'); // отключает zoom колесом
-
-    //         map.geoObjects.add(placemark);
-    //     }
-    //     ymaps.ready(init);
-    // };
   </script>
 </html>
