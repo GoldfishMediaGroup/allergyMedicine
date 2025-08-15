@@ -1,7 +1,15 @@
 .header {
-  padding: 4rem 0 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 500;
+
+  // padding: 4rem 0 1.2rem;
   @include tablet {
     padding: 0.8rem 0 4rem;
+    position: relative;
   }
   @include small-tablet {
     padding: 1.6rem 0 2.4rem;
@@ -9,6 +17,14 @@
   /* .header__container */
 
   &__container {
+    background: $gray;
+    border-radius: 0 0 1rem 1rem;
+    padding: 4rem 0 1.2rem;
+    @include tablet {
+      background: transparent;
+      border-radius: none;
+      padding: 0;
+    }
   }
 
   /* .header__inner */
