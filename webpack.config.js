@@ -239,7 +239,8 @@ module.exports = {
   ],
 
   optimization: {
-    minimize: false,
+    // minimize: false,
+    minimize: !devMode, // Минимизируем только в продакшене
   },
 
   module: {
