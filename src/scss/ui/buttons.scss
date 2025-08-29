@@ -68,6 +68,13 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $accentHover;
+  }
+  &:active {
+    background: $accentActive;
+  }
   @include tablet {
     font-size: 1.8rem;
     padding: 1.4rem;
@@ -85,10 +92,24 @@
 .swiper-button-prev {
   position: static !important;
   margin: 0 !important;
-  width: 6rem !important;
-  height: 6rem !important;
+  width: 5rem !important;
+  height: 5rem !important;
   border-radius: 1.6rem;
-  background: $accent;
+  // background: $accent;
+  border: 0.2rem solid $black;
+  transition: opacity 0.3s, border 0.3s !important;
+  &:hover {
+      border: 0.2rem solid $blue;
+     & svg {
+        transform: translateX(0.5rem);
+        & .fill {
+          fill: $blue;
+        }
+        & .stroke {
+          stroke: $blue;
+        }
+      }
+  }
   @include tablet {
     width: 5rem !important;
     height: 5rem !important;
@@ -108,6 +129,10 @@
     height: 2rem !important;
     object-fit: cover;
     transition: transform 0.3s;
+    & .fill,
+    & .stroke {
+      transition: fill 0.3s, stroke 0.3s;
+    }
     @include small-tablet {
       width: 3rem !important;
       height: 3rem !important;

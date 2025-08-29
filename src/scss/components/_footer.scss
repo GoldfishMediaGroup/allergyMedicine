@@ -45,6 +45,13 @@
   /* .footer__logo-box */
 
   &__logo-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 33.7rem;
+    @include small-tablet {
+      width: 53.6rem;
+    }
   }
 
   /* .footer__logo-img-box */
@@ -73,7 +80,10 @@
     flex-grow: 1;
     display: flex;
     gap: 11rem;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
     @include tablet {
+      display: flex;
       flex-direction: column;
       gap: 2rem;
     }
@@ -104,8 +114,16 @@
   /* .footer__nav-link */
 
   &__nav-link {
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor, 0 0.3px 0 currentColor, 0 -0.3px 0 currentColor;
+    }
     @include tablet {
       font-size: 1.6rem;
+      &:hover {
+        text-shadow: unset;
+      }
     }
     @include small-tablet {
       font-size: 2.4rem;
@@ -120,7 +138,8 @@
     gap: 3.2rem;
     width: 37.7rem;
     @include tablet {
-      width: 100%; gap: 1.6rem;
+      width: 100%;
+      gap: 1.6rem;
     }
     @include small-tablet {
       gap: 2.4rem;

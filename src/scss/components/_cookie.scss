@@ -32,27 +32,20 @@
   // .cookie__container
 
   &__container {
-    width: 171.9rem;
-    @include tablet {
-      width: 100%;
-    }
-    @include small-tablet {
-      width: 100%;
-    }
   }
 
   // .cookie__inner
 
   &__inner {
     border-radius: 1.2rem;
-    padding: 2.4rem 11.6rem;
+    padding: 2.4rem 17.7rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 
-    box-shadow: 0 0.6rem 2.4rem 0 rgba(58, 58, 58, 0.11);
+    box-shadow: 0.1rem 0.4rem 0.4rem 0 rgba(57, 60, 67, 0.25);
     background: #fff;
     @include tablet {
       justify-content: space-between;
@@ -138,6 +131,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border 0.3s, color 0.3s;
+    &:hover {
+      border: 0.1rem solid $blue;
+      color: $blue;
+    }
+    &:active {
+      border: 0.1rem solid $dark-blue;
+      color: $dark-blue;
+    }
     @include tablet {
       border: 0.1rem solid $black;
       border-radius: 1.8rem;

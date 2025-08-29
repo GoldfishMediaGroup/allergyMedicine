@@ -41,7 +41,7 @@
     display: grid;
     // grid-template-columns: repeat(4, 1fr);
     // grid-template-columns: repeat(4, 1fr);
-grid-template-columns: repeat( auto-fit, minmax(42rem, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
     gap: 1.167rem;
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -62,6 +62,10 @@ grid-template-columns: repeat( auto-fit, minmax(42rem, 1fr) );
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
+    background-color: $white;
+    border-radius: 3.2rem;
+    padding: 1.2rem;
+
     &:hover {
       & .where__img-box img {
         scale: 1.05;
@@ -69,9 +73,11 @@ grid-template-columns: repeat( auto-fit, minmax(42rem, 1fr) );
     }
     @include tablet {
       gap: 0.6rem;
+      border-radius: 1.2rem;
     }
     @include small-tablet {
       gap: 0.8rem;
+      border-radius: 1.6rem;
     }
   }
 
@@ -80,15 +86,15 @@ grid-template-columns: repeat( auto-fit, minmax(42rem, 1fr) );
   &__img-box {
     width: 100%;
     height: 22.2rem;
-    background-color: $white;
+
     border-radius: 3.2rem;
     overflow: hidden;
     @include tablet {
-      height: 13rem;
+      height: 10.3rem;
       border-radius: 1.2rem;
     }
     @include small-tablet {
-      height: 18.4rem;
+      height: 11.2rem;
       border-radius: 1.6rem;
     }
     img {
@@ -102,20 +108,20 @@ grid-template-columns: repeat( auto-fit, minmax(42rem, 1fr) );
   /* .where__city-box */
 
   &__city-box {
-    border-radius: 1.2rem;
+    border-radius: 1.6rem;
     padding: 1.4rem 0;
     width: 100%;
-    background: $white;
+    background: $gray;
     display: flex;
     align-items: center;
     justify-content: center;
     @include tablet {
-      border-radius: 1.2rem;
+      border-radius: 0.8rem;
       padding: 0.7rem;
     }
     @include small-tablet {
       border-radius: 0.8rem;
-      padding: 2.8rem 0;
+      padding: 0.6rem 0;
     }
   }
 
