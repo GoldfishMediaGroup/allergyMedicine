@@ -180,6 +180,13 @@ body::before {
       border-radius: 1.8rem;
       background: $accent;
       width: fit-content;
+      transition: background 0.3s;
+      &:hover {
+        background-color: $accentHover;
+      }
+      &:active {
+        background: $accentActive;
+      }
       @include tablet {
         background: transparent;
         padding: 1.4rem 1rem;
@@ -306,8 +313,15 @@ body::before {
     }
 
     & .popup__btn--yes {
-      background: #8acede;
+      background: $accent;
       color: $white;
+      transition: background 0.3s;
+      &:hover {
+        background-color: $accentHover;
+      }
+      &:active {
+        background: $accentActive;
+      }
     }
 
     & .popup__btn-no {
@@ -407,6 +421,13 @@ body::before {
       border-radius: 1.8rem;
       background: $accent;
       width: 100%;
+      transition: background 0.3s;
+      &:hover {
+        background-color: $accentHover;
+      }
+      &:active {
+        background: $accentActive;
+      }
       @include tablet {
         font-size: 1.8rem;
       }
