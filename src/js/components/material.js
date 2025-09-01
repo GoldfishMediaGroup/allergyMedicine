@@ -34,7 +34,6 @@ function material() {
         tableBlock.appendChild(table);
         wrapper.appendChild(scrollbar);
       }
-
     }
 
     const tables = document.querySelectorAll('.material-body__table-wrapper');
@@ -197,10 +196,12 @@ function material() {
   }
   function checkOverflowAndAdjust(seleclor) {
     const lists = document.querySelectorAll(seleclor);
+    const det = seleclor === '.info-list-det' ? ''  : '-det';
+
 
     lists.forEach((list) => {
       list.classList.remove('list-overflow');
-      const items = list.querySelectorAll(`${seleclor}__item`);
+      const items = list.querySelectorAll(`${seleclor}${det}__item`);
 
       if (items.length < 2) return; // минимум 2, чтобы был перенос
 

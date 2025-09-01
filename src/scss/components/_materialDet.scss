@@ -71,9 +71,17 @@
       color: $black;
     }
 
+    & .doc-download__link {
+      max-width: 50rem;
+      @include tablet {
+        max-width: none;
+      }
+    }
+
     & .material-head__list-box {
       display: grid;
       grid-template-columns: 1fr auto;
+      gap: 4rem;
       @include tablet {
         display: flex;
         flex-direction: column;
@@ -108,7 +116,10 @@
 
   &--photo {
     gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 91.4rem);
     @include tablet {
+      display: flex;
       flex-direction: column;
       gap: 1.6rem;
     }
