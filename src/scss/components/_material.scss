@@ -73,6 +73,7 @@
     padding: 2.4rem;
     min-height: 55.7rem;
     height: 100%;
+    gap: 2rem;
     @include tablet {
       padding: 1.6rem;
       min-height: 37.5rem;
@@ -81,6 +82,7 @@
       min-height: 67.8rem;
       border-radius: 2.4rem;
       padding: 2.4rem;
+
     }
     &--img {
       justify-content: space-between;
