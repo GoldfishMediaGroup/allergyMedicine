@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+    <link rel="preload" as="image" href="./assets/images/bannerInfoImg.webp" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Bold.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Medium.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Regular.woff2">
     <title>Главная</title>
   <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
@@ -267,7 +271,7 @@
       <div class="banner__info-box">
         <div class="banner__info-img-wrapper">
           <div class="banner__info-img-box">
-            <img src="./assets/images/bannerInfoImg.webp " loading="lazy" alt="">
+            <img src="./assets/images/bannerInfoImg.webp " fetchpriority="high" decoding="async" loading="eager" alt="">
           </div>
           <div class="banner__info-img-text-box">
             <p class="banner__info-img-num">2+</p>
