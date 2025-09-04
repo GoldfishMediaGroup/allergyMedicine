@@ -82,20 +82,19 @@
       min-height: 67.8rem;
       border-radius: 2.4rem;
       padding: 2.4rem;
-
     }
     &--img {
       justify-content: space-between;
     }
 
     &--text {
-      gap: 5.4rem;
-      @include tablet {
-        gap: 4.8rem;
-      }
-      @include small-tablet {
-        gap: 8rem;
-      }
+      // gap: 5.4rem;
+      // @include tablet {
+      //   gap: 4.8rem;
+      // }
+      // @include small-tablet {
+      //   gap: 8rem;
+      // }
     }
   }
 
@@ -123,6 +122,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex-grow: 1;
     @include tablet {
       gap: 1.2rem;
     }
@@ -133,6 +133,22 @@
   /* .material__info-list */
 
   &__info-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2rem;
+    & .info-list__item {
+      min-height: auto;
+      align-items: flex-start;
+      & .info-list__text {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      &::before {
+        display: none;
+      }
+    }
   }
 
   /* .material__link-title */
@@ -165,8 +181,8 @@
     @include tablet {
       height: 14.3rem;
     }
-        @include small-tablet {
-        height: 28.6rem;
+    @include small-tablet {
+      height: 28.6rem;
     }
   }
 
