@@ -22,6 +22,18 @@
     font-size: 5.6rem;
   }
 }
+.tl2_2 {
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 100%;
+  @include tablet {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+  @include small-tablet {
+    font-size: 4.4rem;
+  }
+}
 .tl3 {
   font-weight: 500;
   font-size: 3.2rem;

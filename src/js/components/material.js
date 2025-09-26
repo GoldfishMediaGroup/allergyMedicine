@@ -4,39 +4,38 @@ window.$ = window.jQuery = require('jquery');
 function material() {
   function materialTable() {
     let tablesItems = document.querySelectorAll('.material-body__desc table');
-
-    if (tablesItems.length) {
-      for (let i = 0; i < tablesItems.length; i++) {
-        let table = tablesItems[i];
-
-        // Пропускаем, если уже обёрнута
-        if (table.closest('.material-body__table-wrapper')) continue;
-
-        // Создаём обёртку
-        const wrapper = document.createElement('div');
-        wrapper.classList.add('material-body__table-wrapper');
-
-        const tableBlock = document.createElement('div');
-        tableBlock.classList.add('material-body__table');
-
-        // Создаём scrollbar
-        const scrollbar = document.createElement('div');
-        scrollbar.classList.add('material-body__table-scrollbar');
-
-        const scrollbarThumb = document.createElement('div');
-        scrollbarThumb.classList.add('material-body__table-scrollbar-thumb');
-
-        scrollbar.appendChild(scrollbarThumb);
-
-        // Вставляем wrapper на место таблицы
-        table.parentElement.insertBefore(wrapper, table);
-        wrapper.appendChild(tableBlock);
-        tableBlock.appendChild(table);
-        wrapper.appendChild(scrollbar);
-      }
-    }
-
     const tables = document.querySelectorAll('.material-body__table-wrapper');
+
+    if (tablesItems.length <= 0 || tables.length) return;
+
+    for (let i = 0; i < tablesItems.length; i++) {
+      let table = tablesItems[i];
+
+      // Пропускаем, если уже обёрнута
+      if (table.closest('.material-body__table-wrapper')) continue;
+
+      // Создаём обёртку
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('material-body__table-wrapper');
+
+      const tableBlock = document.createElement('div');
+      tableBlock.classList.add('material-body__table');
+
+      // Создаём scrollbar
+      const scrollbar = document.createElement('div');
+      scrollbar.classList.add('material-body__table-scrollbar');
+
+      const scrollbarThumb = document.createElement('div');
+      scrollbarThumb.classList.add('material-body__table-scrollbar-thumb');
+
+      scrollbar.appendChild(scrollbarThumb);
+
+      // Вставляем wrapper на место таблицы
+      table.parentElement.insertBefore(wrapper, table);
+      wrapper.appendChild(tableBlock);
+      tableBlock.appendChild(table);
+      wrapper.appendChild(scrollbar);
+    }
 
     tables.forEach((tableWrapper) => {
       const container = tableWrapper.querySelector('.material-body__table');
@@ -161,8 +160,11 @@ function material() {
       updateThumb();
     });
   }
+
   function materialSwiper() {
     const sourseSwipers = document.querySelectorAll('.material-body__swiper-box .swiper');
+    if (sourseSwipers.length <= 0) return;
+
     function soursSwiperInit(sourseSwipers) {
       sourseSwipers.forEach((item) => {
         const swiperSoursPrev = item.parentElement.querySelector('.swiper-button-prev');
@@ -194,10 +196,11 @@ function material() {
 
     soursSwiperInit(sourseSwipers);
   }
+
   function checkOverflowAndAdjust(seleclor) {
     const lists = document.querySelectorAll(seleclor);
-    const det = seleclor === '.info-list-det' ? ''  : '-det';
-
+    if (lists.length <= 0) return;
+    const det = seleclor === '.info-list-det' ? '' : '-det';
 
     lists.forEach((list) => {
       list.classList.remove('list-overflow');
@@ -218,34 +221,38 @@ function material() {
     });
   }
 
-  try {
-    materialTable();
-  } catch {}
-  try {
-    materialSwiper();
-  } catch {}
-  try {
-    checkOverflowAndAdjust('.info-list-det');
-  } catch {}
-  try {
-    checkOverflowAndAdjust('.info-list');
-  } catch {}
+  function materialVideo() {
+    const videos = document.querySelectorAll('video');
+    if (!videos.length) return;
 
+    videos.forEach((video) => {
+      video.addEventListener('play', () => {
+        video.parentElement.classList.add('isActive');
+      });
+
+      video.addEventListener('pause', () => {
+        video.parentElement.classList.remove('isActive');
+      });
+
+      // Если нужно запускать по клику на сам контейнер
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          video.parentElement.classList.add('isActive');
+        } else {
+          video.parentElement.classList.remove('isActive');
+        }
+      });
+    });
+  }
+
+  materialTable();
+  materialSwiper();
+  checkOverflowAndAdjust('.info-list-det');
+  checkOverflowAndAdjust('.info-list');
+  materialVideo();
   window.addEventListener('resize', () => {
-    try {
-      checkOverflowAndAdjust('.info-list-det');
-    } catch {}
-    try {
-      checkOverflowAndAdjust('.info-list');
-    } catch {}
+    checkOverflowAndAdjust('.info-list-det');
+    checkOverflowAndAdjust('.info-list');
   });
 }
 export default material;
-
-// container.addEventListener('scroll', updateThumb);
-//   if (scrollWidth <= containerWidth) {
-//     scrollbar.classList.add('is-hidden');
-//     return;
-//   } else {
-//     scrollbar.classList.remove('is-hidden');
-//   }
