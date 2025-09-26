@@ -3,7 +3,7 @@
   @include tablet {
     display: flex;
     align-items: center;
-
+    flex-shrink: 0;
     width: 4.4rem;
     height: 4.4rem;
   }
