@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+    <link rel="preload" fetchpriority="high"  as="image" href="./assets/images/bannerInfoImg.webp" >
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Bold.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Medium.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/CeraPro-Regular.woff2">
+    <title>Главная</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper ">
+      <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__inner">
+      <button class="header__burger mobile">
+        <div class="header__burger-svg-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 5.83334H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M2.5 10H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M2.5 14.1667H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </button>
+      <a href="#header" class="header__logo-box nav-link">
+        <div class="header__logo-img-box">
+          <img src="./assets/images/logo.webp" loading="lazy" alt="">
+        </div>
+      </a>
+      <button class="header__burger-close mobile">
+        <div class="header__burger-close-svg-box">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.0358 1.96484L1.96436 14.0363" stroke="#717378" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1.96436 1.96484L14.0358 14.0363" stroke="#717378" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </button>
+      <div class="header__nav-wrapper" data-lenis-prevent="true">
+        <div class="header__nav-inner">
+          <nav class="header__nav-box">
+            <ul class="header__nav-list">
+              <li class="header__nav-item mobile">
+                <a href="#history" class="header__nav-link txt16 txt16_medium nav-link">История препарата</a>
+              </li>
+              <li class="header__nav-item mobile">
+                <a href="#characteristics" class="header__nav-link txt16 txt16_medium nav-link">Преимущества</a>
+              </li>
+              <li class="header__nav-item mobile">
+                <a href="#about" class="header__nav-link txt16 txt16_medium nav-link">О препарате</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link txt16 txt16_medium nav-link">Инструкция по применению</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Где купить</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Исследования</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Презентации препарата</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Статьи по теме</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Контакты</a>
+              </li>
+            </ul>
+
+            <a href="#application" class="header__nav-btn txt18 txt18_medium accent-btn nav-link">Задать вопрос</a>
+          </nav>
+
+          <div class="header__nav-social-box mobile">
+            <p class="header__nav-social-title">Контактная информация:</p>
+            <ul class="header__nav-social-list">
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">АО «Бофарм»</p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Юридический адрес: 141191, Московская область, г. Фрязино, ул. Станционная, д. 2, строение 10, этаж 1, пом. 127
+                </p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">Почтовый адрес: 123182, г. Москва, а/я 4</p>
+              </li>
+
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Телефон:
+                  <a href="tel:+74959891776">+7 (495) 989–17–76</a>
+                </p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Электронная почта:
+
+                  <a href="mailto:sales@bofarm.ru">sales@bofarm.ru</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div id="popup__characteristics1" aria-hidden="true" class="popup popup--characteristics" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title txt20">
+              Блоки из отчёта о 3-й фазе КИ с комментарием о постановке задачи на наблюдательный дневниковый период после курса
+              терапии в сравнении с препаратами контрольной группы и результатах
+            </p>
+            <p class="popup__body-content-desk txt16">
+              «В ходе терапии были выявлены значимые различия (p-value = 0.02557) на визите 4 по показателю сон (трудности с
+              засыпанием или отсутствие комфортного крепкого сна) – пациенты основной группы ставили более низкие баллы по шкале
+              MiniRQLQ и таким образом оценивали качество сна выше. Анализ дневников показал, что в течение всего периода
+              наблюдения (30 суток) по окончании терапии наблюдалась тенденция среди пациентов группы сравнения чаще отмечать
+              проявление неназальных симптомов, а также требовать дополнительных препаратов» (из раздела «Результаты оценки
+              эффективности, вторичные конечные точки» Отчёта о КИ № KI-THYM-001от 17.10.2017).
+            </p>
+          </div>
+
+          <a href="google.com" target="_blank" class="popup__link txt18 txt18_medium">Скачать Файл исследования</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- data-popup-no-close добавить атрибут, если не нужно эту модалку закрывать на клик по оверлею, только по внутненним кнопкам закрытия-->
+<div id="popup__arise-expert" data-popup-no-close="" aria-hidden="true" class="popup popup--arise-expert" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn" style="opacity: 0; visibility: hidden;">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-desk txt16">
+              В данном разделе информация предназначена исключительно для специалистов в области здравоохранения – медицинских и
+              фармацевтических работников.
+            </p>
+            <p class="popup__body-content-title txt20">Вы являетесь медицинским специалистом?</p>
+          </div>
+          <div class="popup__btn-box">
+            <button class="popup__btn popup__btn--yes" data-close="">да</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__success" aria-hidden="true" class="popup popup--success" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title tl4">Ваш вопрос принят</p>
+            <p class="popup__body-content-desk txt20">
+              Специалист отправит ответ в&nbsp;ближайшее время на&nbsp;указанный вами почтовый адрес
+            </p>
+          </div>
+
+          <a href="#" class="popup__link txt18 txt18_medium">Хорошо</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <main>
+        <section class="banner _first" id="banner">
+  <div class="banner__container container">
+    <div class="banner__inner">
+      <div class="banner__content-box">
+        <div class="banner__content-title-box">
+          <p class="banner__content-subtitle tl2">
+            Типрессин
+            <sup>®</sup>
+            - лечение
+            <br>
+            и профилактика заболеваний аллергического спектра.
+          </p>
+        </div>
+        <ul class="banner__content-list">
+          <li class="banner__content-item" data-mob-popup="#popup__characteristics1">
+            <div class="banner__content-item-info-box">
+              <div class="banner__content-item-svg-wrapper">
+                <div class="banner__content-item-svg-box">
+                  <img src="./assets/images/bannerItem1.svg" alt="">
+                </div>
+              </div>
+              <p class="banner__content-item-title txt20 txt20_medium">Первый препарат патогенетической терапии</p>
+            </div>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
+          </li>
+          <li class="banner__content-item" data-mob-popup="#popup__characteristics2">
+            <div class="banner__content-item-info-box">
+              <div class="banner__content-item-svg-wrapper">
+                <div class="banner__content-item-svg-box">
+                  <img src="./assets/images/bannerItem2.svg" alt="">
+                </div>
+              </div>
+              <p class="banner__content-item-title txt20 txt20_medium">Первый препарат с доказанным профилактическим действием</p>
+            </div>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
+          </li>
+          <li class="banner__content-item" data-mob-popup="#popup__characteristics1">
+            <div class="banner__content-item-info-box">
+              <div class="banner__content-item-svg-wrapper">
+                <div class="banner__content-item-svg-box">
+                  <img src="./assets/images/bannerItem3.svg" alt="">
+                </div>
+              </div>
+              <p class="banner__content-item-title txt20 txt20_medium">
+                Сочетает в себе системное
+                <br>
+                и местное действие
+              </p>
+            </div>
+            <a href="#" data-popup="#popup__characteristics1" class="banner__content-item-link txt18 txt18_medium desktop">
+              подробнее
+            </a>
+          </li>
+          <li class="banner__content-item">
+            <div class="banner__content-item-info-box">
+              <div class="banner__content-item-svg-wrapper">
+                <div class="banner__content-item-svg-box">
+                  <img src="./assets/images/bannerItem4.svg" alt="">
+                </div>
+              </div>
+              <p class="banner__content-item-title txt20 txt20_medium">
+                Отсутствие побочных
+                <br>
+                эффектов
+              </p>
+            </div>
+            <a href="#" class="banner__content-item-link txt18 txt18_medium desktop">подробнее</a>
+          </li>
+        </ul>
+      </div>
+      <div class="banner__info-box">
+        <div class="banner__info-img-wrapper">
+          <div class="banner__info-img-box">
+            <img src="./assets/images/bannerInfoImg.webp " alt="" fetchpriority="high">
+          </div>
+          <div class="banner__info-img-text-box">
+            <p class="banner__info-img-num">2+</p>
+            <p class="banner__info-img-text txt20">Лет</p>
+          </div>
+        </div>
+        <div class="banner__info-text-box">
+          <div class="banner__info-text-title-box">
+            <p class="banner__info-text-title tl4">
+              Типрессин
+              <sup>®</sup>
+            </p>
+            <p class="banner__info-text-desc txt16">
+              отечественный инновационный лекарственный препарат для лечения и профилактики заболеваний аллергического спектра.
+              Применяется как в монотерапии, так и в составе комбинированной терапии у взрослых и детей с 2-х летнего возраста.
+            </p>
+          </div>
+          <div class="banner__info-text-compound-box">
+            <p class="banner__info-text-compound-title txt20 txt20_medium">Состав:</p>
+            <p class="banner__info-text-compound-text txt16">Гамма-D-глутамил-D-триптофан натрия</p>
+          </div>
+        </div>
+      </div>
+      <div class="banner__img-box desktop">
+        <img src="./assets/images/bannerPhoto.webp " alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="history" id="history">
+  <div class="history__container container">
+    <div class="history__inner">
+      <p class="history__title tl2">
+        История препарата Типрессин
+        <sup>®</sup>
+      </p>
+      <div class="history__desktop-wrapper">
+        <div class="history__img-swiper-box">
+          <div class="history__img-swiper swiper">
+            <div class="history__img-swiper-wrapper swiper-wrapper">
+              <div class="history__img-swiper-slide swiper-slide">
+                <div class="history__img-slide-inner">
+                  <div class="history__img-box">
+                    <img src="./assets/images/historySlide1.webp " loading="lazy" alt="">
+                  </div>
+                  <ul class="history__img-list">
+                    <li class="history__img-item txt18" style="top: 9.6rem; left: 8.9rem">L-L-пептиды, D-D-пептиды</li>
+                    <li class="history__img-item txt18" style="top: 46.3rem; left: 51rem">Изомеры пептидов</li>
+                    <li class="history__img-item txt18" style="top: 52.6rem; left: 12.8rem">Изомер Glu-Trp</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="history__img-swiper-slide swiper-slide">
+                <div class="history__img-slide-inner">
+                  <div class="history__img-box">
+                    <img src="./assets/images/historySlide2.webp " loading="lazy" alt="">
+                  </div>
+                  <ul class="history__img-list">
+                    <li class="history__img-item txt18" style="top: 10.5rem; left: 13.7rem">Аналог Тимогена</li>
+                    <li class="history__img-item txt18" style="top: 43rem; left: 47.4rem">Лечение аутоимунных заболеваний</li>
+                    <li class="history__img-item txt18" style="top: 53rem; left: 14.5rem">Высоко безопасный</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="history__img-swiper-slide swiper-slide">
+                <div class="history__img-slide-inner">
+                  <div class="history__img-box">
+                    <img src="./assets/images/historySlide3.webp " loading="lazy" alt="">
+                  </div>
+                  <ul class="history__img-list">
+                    <li class="history__img-item txt18" style="top: 10.5rem; left: 13.7rem">Не реже одного раза в год</li>
+                    <li class="history__img-item txt18" style="top: 46.3rem; left: 51rem">Консультация аллерголога</li>
+                    <li class="history__img-item txt18" style="top: 56.7rem; left: 10.9rem">Консультация иммунолога</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="history__img-swiper-slide swiper-slide">
+                <div class="history__img-slide-inner">
+                  <div class="history__img-box">
+                    <img src="./assets/images/historySlide4.webp " loading="lazy" alt="">
+                  </div>
+                  <ul class="history__img-list">
+                    <li class="history__img-item txt18" style="top: 14.3rem; left: 12.1rem">Атопический дерматит</li>
+                    <li class="history__img-item txt18" style="top: 54.4rem; left: 11.3rem">Аллергический ринит</li>
+                    <li class="history__img-item txt18" style="top: 25.3rem; left: 62.3rem">Экзема</li>
+                    <li class="history__img-item txt18" style="top: 43.2rem; left: 57.9rem">Сезонный поллиноз</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="history__content-swiper-box">
+          <div class="history__content-swiper swiper">
+            <div class="history__content-swiper-wrapper swiper-wrapper">
+              <div class="history__content-swiper-slide swiper-slide">
+                <div class="history__content-slide-inner">
+                  <p class="history__content-slide-num tl3">01</p>
+                  <div class="history__content-slide-text-box">
+                    <p class="history__content-slide-title tl3">Первые исследования</p>
+                    <p class="history__content-slide-text txt20">
+                      В Лаборатории коротких пептидов Института биоорганической химии имени акад. Шемякина и Овчинникова под
+                      руководством дбн профессора В.И.Дейгина с конца 80-х годов 20 века проводилось изучение влияния оптической
+                      изомерии на проявление биологических свойств дипептида Glu-Trp на моделях in vitro и in vivo.
+                      <br>
+                      Было установлено, что L-L и D-D - изомеры иммуномодулирующего дипептида Тимогена (L-Glu-L-Trp) (EW) и его
+                      изомера [D-Glu-(gamma-Trp)] [ie(w)] различным образом влияют на популяцию стволовых клеток кроветворения:
+                      L-L-пептиды обладают гемостимулирующими свойствами, а D-D-пептиды – гемоингибирующими. Эти исследования
+                      позволили установить реципрокную зависимость действия изомеров Glu-Trp на иммунную и гемопоэтическую
+                      системы, а также взаимосвязь между биологическим действием, химической структурой и оптической активностью
+                      изомеров пептидов.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="history__content-swiper-slide swiper-slide">
+                <div class="history__content-slide-inner">
+                  <p class="history__content-slide-num tl3">02</p>
+                  <div class="history__content-slide-text-box">
+                    <p class="history__content-slide-title tl3">Создание тимодепрессина</p>
+                    <p class="history__content-slide-text txt20">
+                      На основе пептида [D-Glu-(gamma-Trp)] [ie(w)], обладающего иммуносупрессорной активностью, был разработан
+                      препарат Тимодепрессин (гамма-Д-глутамил-Д-триптофан натрий). Доклинические и клинические исследования
+                      Тимодепрессина показали, что препарат проявляет иммуносупрессивные свойства на уровне клеток CD34+, которые
+                      являются предшественниками гемопоэтических и иммунокомпетентных клеток. Исследование молекулярных и
+                      клеточных механизмов негативного регулирования Тимодепрессином пролиферации и миграции CD34+ продолжается и
+                      в настоящее время. Тимодепрессин был зарегистрирован в 2008г в качестве эффективного высоко безопасного
+                      средства для лечения ряда аутоиммунных заболеваний у взрослых и детей с 2-х летнего возраста. Получил
+                      высокую оценку в профильных учреждениях системы здравоохранения, однако не стал рабочим инструментом
+                      широкого круга специалистов практического здравоохранения с учётом появления в клинической практике
+                      альтернативных инновационных препаратов новых классов.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="history__content-swiper-slide swiper-slide">
+                <div class="history__content-slide-inner">
+                  <p class="history__content-slide-num tl3">03</p>
+                  <div class="history__content-slide-text-box">
+                    <p class="history__content-slide-title tl3">перепозиционирование</p>
+                    <p class="history__content-slide-text txt20">
+                      В 2017г Тимодепрессин был перепозиционирован в лечение аллергического воспаления, где его умеренный
+                      обратимый иммуносупрессивный эффект при исключительной безопасности применения позволил заявить о
+                      предложении специалистам практического здравоохранения первого в классе регуляторных пептидомиметиков
+                      лекарственного препарата патогенетического действия, способного модифицировать течение заболеваний
+                      аллергического спектра. Многоцентровое клиническое исследование, проведённое в 2018г, показало не только
+                      равную эффективность Тимодепрессина в лечебной схеме относительно комплекса системных и местных
+                      противоаллергических средств, но и наличие профилактического эффекта, как способности предотвращать рецидивы
+                      проявлений аллергии.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="history__content-swiper-slide swiper-slide">
+                <div class="history__content-slide-inner">
+                  <p class="history__content-slide-num tl3">04</p>
+                  <div class="history__content-slide-text-box">
+                    <p class="history__content-slide-title tl3">Типрессин</p>
+                    <p class="history__content-slide-text txt20">
+                      В 2025г препарат вошёл под новым торговым наименованием ТИПРЕССИН с обновлённой по показаниям к применению
+                      инструкцией. Коллектив разработчиков уверен, что ТИПРЕССИН займёт достойное место в арсенале практических
+                      врачей многих специальностей: аллергологов, ЛОРов, дерматологов, педиатров, терапевтов, позволит пациентам с
+                      сезонным (поллиноз) и круглогодичным аллергическим ринитом, аллергическим конъюнктивитом, атопическим
+                      дерматитом и экземой не только оперативно справляться с проявлениями заболевания, но и профилактировать
+                      рецидивы, тем самым значительно повысить качество жизни!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <button class="history__content-swiper-next-btn">
+          <div class="history__content-swiper-next-btn-svg-box">
+            <svg viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.30633 16.6134L3.78039 16.6134L3.78039 19.6653L5.30633 19.6653L5.30633 16.6134ZM29.1077 19.6653C29.9505 19.6653 30.6337 18.9821 30.6337 18.1393C30.6337 17.2966 29.9505 16.6134 29.1077 16.6134L29.1077 19.6653ZM5.30633 18.1393L5.30633 19.6653H29.1077L29.1077 18.1393L29.1077 16.6134H5.30633L5.30633 18.1393Z"
+                fill="white"
+              />
+              <path
+                d="M20.3779 7.82548L30.6919 18.1394L20.3779 28.4534"
+                stroke="white"
+                stroke-width="3.05187"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button> -->
+
+        <div class="history__swiper-nav-box">
+          <div class="history__swiper-fraction tl3"></div>
+
+          <div class="history__swiper-btn-box">
+            <button class="history__swiper-btn history__swiper-btn--prev swiper-button swiper-button-prev">
+              <div class="history__swiper-btn-svg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="fill" d="M17.0702 10.8502L17.9202 10.8502L17.9202 9.15022L17.0702 9.15022L17.0702 10.0002L17.0702 10.8502ZM3.81191 9.15022C3.34247 9.15022 2.96191 9.53078 2.96191 10.0002C2.96191 10.4697 3.34247 10.8502 3.81191 10.8502L3.81191 10.0002L3.81191 9.15022ZM17.0702 10.0002L17.0702 9.15022H3.81191L3.81191 10.0002L3.81191 10.8502H17.0702L17.0702 10.0002Z" fill="#393C43"></path>
+                  <path class="stroke" d="M8.67542 15.7463L2.93017 10.0011L8.67542 4.25586" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="history__swiper-btn history__swiper-btn--next swiper-button swiper-button-next">
+              <div class="history__swiper-btn-svg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                  <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="history__mobile-wrapper">
+        <div class="history__tab isActive">
+          <div class="history__tab-header">
+            <div class="history__tab-header-svg-wrapper">
+              <div class="history__tab-header-svg-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.7502 17.0703L10.7502 17.8203L9.25022 17.8203L9.25022 17.0703L10.7502 17.0703ZM9.25022 3.81204C9.25022 3.39782 9.58601 3.06204 10.0002 3.06204C10.4144 3.06204 10.7502 3.39782 10.7502 3.81204L9.25022 3.81204ZM10.0002 17.0703L9.25022 17.0703L9.25022 3.81204L10.0002 3.81204L10.7502 3.81204L10.7502 17.0703L10.0002 17.0703Z" fill="white"></path>
+                  <path d="M15.7454 8.6748L10.0001 2.92956L4.25488 8.6748" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="history__tab-header-title tl3">Первые исследования</p>
+          </div>
+          <div class="history__tab-content">
+            <div class="history__tab-content-inner">
+              <div class="history__tab-info-box">
+                <div class="history__tab-img-wrapper">
+                  <div class="history__tab-img-box">
+                    <img src="./assets/images/historySlide1.webp " loading="lazy" alt="">
+                  </div>
+                </div>
+                <div class="history__tab-text-box">
+                  <p class="history__tab-text">
+                    В Лаборатории коротких пептидов Института биоорганической химии имени акад. Шемякина и Овчинникова под
+                    руководством дбн профессора В.И.Дейгина с конца 80-х годов 20 века проводилось изучение влияния оптической
+                    изомерии на проявление биологических свойств дипептида Glu-Trp на моделях in vitro и in vivo.
+                    <br>
+                    Было установлено, что L-L и D-D - изомеры иммуномодулирующего дипептида Тимогена (L-Glu-L-Trp) (EW) и его
+                    изомера [D-Glu-(gamma-Trp)] [ie(w)] различным образом влияют на популяцию стволовых клеток кроветворения:
+                    L-L-пептиды обладают гемостимулирующими свойствами,а D-D-пептиды – гемоингибирующими. Эти исследования
+                    позволили установить реципрокную зависимость действия изомеров Glu-Trpна иммунную и гемопоэтическую системы, а
+                    также взаимосвязь между биологическим действием, химической структурой и оптической активностью изомеров
+                    пептидов.
+                  </p>
+                  <button class="history__tab-show-more-btn">
+                    <p class="history__tab-show-more-btn-text">Показать полностью</p>
+                    <div class="history__tab-show-more-btn-svg-box">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6 7.45837L11.1667 12.8917C10.525 13.5334 9.47502 13.5334 8.83336 12.8917L3.40002 7.45837" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <ul class="history__tab-list">
+                <li class="history__tab-item">L-L-пептиды, D-D-пептиды</li>
+                <li class="history__tab-item">Изомеры пептидов</li>
+                <li class="history__tab-item">Изомер Glu-Trp</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="history__tab">
+          <div class="history__tab-header">
+            <div class="history__tab-header-svg-wrapper">
+              <div class="history__tab-header-svg-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.7502 17.0703L10.7502 17.8203L9.25022 17.8203L9.25022 17.0703L10.7502 17.0703ZM9.25022 3.81204C9.25022 3.39782 9.58601 3.06204 10.0002 3.06204C10.4144 3.06204 10.7502 3.39782 10.7502 3.81204L9.25022 3.81204ZM10.0002 17.0703L9.25022 17.0703L9.25022 3.81204L10.0002 3.81204L10.7502 3.81204L10.7502 17.0703L10.0002 17.0703Z" fill="white"></path>
+                  <path d="M15.7454 8.6748L10.0001 2.92956L4.25488 8.6748" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="history__tab-header-title tl3">Создание тимодепрессина</p>
+          </div>
+          <div class="history__tab-content">
+            <div class="history__tab-content-inner">
+              <div class="history__tab-info-box">
+                <div class="history__tab-img-wrapper">
+                  <div class="history__tab-img-box"><img src="./assets/images/historySlide2.webp " loading="lazy" alt=""></div>
+                </div>
+                <div class="history__tab-text-box">
+                  <p class="history__tab-text">
+                    На основе пептида [D-Glu-(gamma-Trp)] [ie(w)], обладающего иммуносупрессорной активностью, был разработан
+                    препарат Тимодепрессин (гамма-Д-глутамил-Д-триптофан натрий). Доклинические и клинические исследования
+                    Тимодепрессина показали, что препарат проявляет иммуносупрессивные свойства на уровне клеток CD34+, которые
+                    являются предшественниками гемопоэтических и иммунокомпетентных клеток. Исследование молекулярных и клеточных
+                    механизмов негативного регулирования Тимодепрессином пролиферации и миграции CD34+ продолжается и в настоящее
+                    время.
+                    <br>
+                    Тимодепрессин был зарегистрирован в 2008г в качестве эффективного высоко безопасного средства для лечения ряда
+                    аутоиммунных заболеваний у взрослых и детей с 2-х летнего возраста. Получил высокую оценку в профильных
+                    учреждениях системы здравоохранения, однако не стал рабочим инструментом широкого круга специалистов
+                    практического здравоохранения с учётом появления в клинической практике альтернативных инновационных
+                    препаратов новых классов.
+                  </p>
+                  <button class="history__tab-show-more-btn">
+                    <p class="history__tab-show-more-btn-text">Показать полностью</p>
+                    <div class="history__tab-show-more-btn-svg-box">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6 7.45837L11.1667 12.8917C10.525 13.5334 9.47502 13.5334 8.83336 12.8917L3.40002 7.45837" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <ul class="history__tab-list">
+                <li class="history__tab-item">Аналог Тимогена</li>
+                <li class="history__tab-item">Лечение аутоимунных заболеваний</li>
+                <li class="history__tab-item">Высоко безопасный</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="history__tab">
+          <div class="history__tab-header">
+            <div class="history__tab-header-svg-wrapper">
+              <div class="history__tab-header-svg-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.7502 17.0703L10.7502 17.8203L9.25022 17.8203L9.25022 17.0703L10.7502 17.0703ZM9.25022 3.81204C9.25022 3.39782 9.58601 3.06204 10.0002 3.06204C10.4144 3.06204 10.7502 3.39782 10.7502 3.81204L9.25022 3.81204ZM10.0002 17.0703L9.25022 17.0703L9.25022 3.81204L10.0002 3.81204L10.7502 3.81204L10.7502 17.0703L10.0002 17.0703Z" fill="white"></path>
+                  <path d="M15.7454 8.6748L10.0001 2.92956L4.25488 8.6748" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="history__tab-header-title tl3">Перепозиционирование</p>
+          </div>
+          <div class="history__tab-content">
+            <div class="history__tab-content-inner">
+              <div class="history__tab-info-box">
+                <div class="history__tab-img-wrapper">
+                  <div class="history__tab-img-box"><img src="./assets/images/historySlide3.webp " loading="lazy" alt=""></div>
+                </div>
+                <div class="history__tab-text-box">
+                  <p class="history__tab-text">
+                    В 2017г Тимодепрессин был перепозиционирован в лечение аллергического воспаления, где его умеренный обратимый
+                    иммуносупрессивный эффект при исключительной безопасности применения позволил заявить о предложении
+                    специалистам практического здравоохранения первого в классе регуляторных пептидомиметиков лекарственного
+                    препарата патогенетического действия, способного модифицировать течение заболеваний аллергического спектра.
+                    <br>
+                    Многоцентровое клиническое исследование, проведённое в 2018г, показало не только равную эффективность
+                    Тимодепрессина в лечебной схеме относительно комплекса системных и местных противоаллергических средств, но и
+                    наличие профилактического эффекта, как способности предотвращать рецидивы проявлений аллергии.
+                  </p>
+                  <button class="history__tab-show-more-btn">
+                    <p class="history__tab-show-more-btn-text">Показать полностью</p>
+                    <div class="history__tab-show-more-btn-svg-box">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6 7.45837L11.1667 12.8917C10.525 13.5334 9.47502 13.5334 8.83336 12.8917L3.40002 7.45837" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <ul class="history__tab-list">
+                <li class="history__tab-item">Консультация иммунолога</li>
+                <li class="history__tab-item">Не реже одного раза в год</li>
+                <li class="history__tab-item">Консультация аллерголога</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="history__tab">
+          <div class="history__tab-header">
+            <div class="history__tab-header-svg-wrapper">
+              <div class="history__tab-header-svg-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.7502 17.0703L10.7502 17.8203L9.25022 17.8203L9.25022 17.0703L10.7502 17.0703ZM9.25022 3.81204C9.25022 3.39782 9.58601 3.06204 10.0002 3.06204C10.4144 3.06204 10.7502 3.39782 10.7502 3.81204L9.25022 3.81204ZM10.0002 17.0703L9.25022 17.0703L9.25022 3.81204L10.0002 3.81204L10.7502 3.81204L10.7502 17.0703L10.0002 17.0703Z" fill="white"></path>
+                  <path d="M15.7454 8.6748L10.0001 2.92956L4.25488 8.6748" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="history__tab-header-title tl3">Типрессин</p>
+          </div>
+          <div class="history__tab-content">
+            <div class="history__tab-content-inner">
+              <div class="history__tab-info-box">
+                <div class="history__tab-img-wrapper">
+                  <div class="history__tab-img-box"><img src="./assets/images/historySlide4.webp " loading="lazy" alt=""></div>
+                </div>
+                <div class="history__tab-text-box">
+                  <p class="history__tab-text">
+                    В 2025г препарат вошёл под новым торговым наименованием ТИПРЕССИН с обновлённой по показаниям к применению
+                    инструкцией. Коллектив разработчиков уверен, что ТИПРЕССИН займёт достойное место в арсенале практических
+                    врачей многих специальностей: аллергологов, ЛОРов, дерматологов, педиатров, терапевтов, позволит пациентам с
+                    сезонным (поллиноз) и круглогодичным аллергическим ринитом, аллергическим конъюнктивитом, атопическим
+                    дерматитом и экземой не только оперативно справляться с проявлениями заболевания, но и профилактировать
+                    рецидивы, тем самым значительно повысить качество жизни!
+                  </p>
+                  <button class="history__tab-show-more-btn">
+                    <p class="history__tab-show-more-btn-text">Показать полностью</p>
+                    <div class="history__tab-show-more-btn-svg-box">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6 7.45837L11.1667 12.8917C10.525 13.5334 9.47502 13.5334 8.83336 12.8917L3.40002 7.45837" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <ul class="history__tab-list">
+                <li class="history__tab-item">Сезонный поллиноз</li>
+                <li class="history__tab-item">Экзема</li>
+                <li class="history__tab-item">Аллергический ринит</li>
+                <li class="history__tab-item">Атопический дерматит</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="characteristics" id="characteristics">
+  <div class="characteristics__container container">
+    <div class="characteristics__inner">
+      <p class="characteristics__title tl2">
+        Уникальные характеристики Типрессина
+        <sup>®</sup>
+      </p>
+      <div class="characteristics__content-box">
+        <div class="characteristics__img-wrapper">
+          <div class="characteristics__img-box">
+            <img src="./assets/images/characteristicsImg.webp" loading="lazy" alt="">
+          </div>
+        </div>
+
+        <ul class="characteristics__list">
+          <li class="characteristics__item characteristics__item--left" style="top: 21.1rem; right: 105.2rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Изомеры пептидов</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 14.1rem; height: 9.3rem; left: 100%; top: 50%">
+              <img src="./assets/images/characteristics1.webp" loading="lazy" alt="">
+            </div>
+          </li>
+          <li class="characteristics__item characteristics__item--left" style="top: 39.8rem; right: 115.2rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Изомеры пептидов</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 19.9rem; height: 6.29rem; left: 100%; top: 50%">
+              <img src="./assets/images/characteristics2.webp" loading="lazy" alt="">
+            </div>
+          </li>
+          <li class="characteristics__item characteristics__item--left" style="top: 61.6rem; right: 108.5rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Профилактический эффект</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 14.3rem; height: 6.77rem; left: 100%; bottom: 50%">
+              <img src="./assets/images/characteristics3.webp" loading="lazy" alt="">
+            </div>
+          </li>
+          <li class="characteristics__item characteristics__item--right" style="top: 15.3rem; left: 108.1rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Изомеры пептидов</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 13.9rem; height: 9.18rem; right: 100%; top: 50%">
+              <img src="./assets/images/characteristics5.webp" loading="lazy" alt="">
+            </div>
+          </li>
+          <li class="characteristics__item characteristics__item--right" style="top: 39.8rem; left: 114.2rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Изомеры пептидов</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 20.2rem; height: 11.875rem; right: 100%; top: 50%">
+              <img src="./assets/images/characteristics4.webp" loading="lazy" alt="">
+            </div>
+          </li>
+          <li class="characteristics__item characteristics__item--right" style="top: 63.2rem; left: 110.2rem">
+            <button class="characteristics__item-btn" data-popup="#popup__characteristics1">
+              <p class="characteristics__item-btn-text txt18 txt18_medium">Изомеры пептидов</p>
+              <div class="characteristics__item-btn-svg-box">
+                <img src="./assets/images/plus.svg" alt="">
+              </div>
+            </button>
+            <div class="characteristics__item-img-box desktop" style="width: 16.4rem; height: 9.1rem; right: 100%; bottom: 50%">
+              <img src="./assets/images/characteristics6.webp" loading="lazy" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="about" id="about">
+  <div class="about__container container">
+    <div class="about__inner">
+      <p class="about__title tl2">
+        О препарате Типрессин<sup>®</sup>
+      </p>
+      <div class="about__content">
+
+   
+      <div class="about__swiper-box">
+        <div class="about__swiper swiper">
+          <div class="about__swiper-wrapper swiper-wrapper">
+            <div class="about__swiper-slide swiper-slide">
+              <div class="about__swiper-slide-img-box">
+                <img src="./assets/images/aboutSlide1.webp" loading="lazy" alt="">
+              </div>
+            </div>
+            <div class="about__swiper-slide swiper-slide">
+              <div class="about__swiper-slide-img-box">
+                <img src="./assets/images/aboutSlide2.webp" loading="lazy" alt="">
+              </div>
+            </div>
+            <div class="about__swiper-slide swiper-slide">
+              <div class="about__swiper-slide-img-box">
+                <img src="./assets/images/aboutSlide3.webp" loading="lazy" alt="">
+              </div>
+            </div>
+            <div class="about__swiper-slide swiper-slide">
+              <div class="about__swiper-slide-img-box">
+                <img src="./assets/images/aboutSlide4.webp" loading="lazy" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__text-box">
+        <!-- <p class="about__title tl2">
+          О препарате Типрессин
+          <sup>®</sup>
+        </p> -->
+        <p class="about__text txt20">
+          Отечественный инновационный лекарственный препарат для лечения и профилактики заболеваний аллергического спектра.
+          Применяется как в монотерапии, так и в составе комбинированной терапии у взрослых и детей с 2-х летнего возраста.
+        </p>
+      </div>
+
+      <div class="about__list">
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">регистрационное удостоверение</p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">
+            Инструкция
+            <br>
+            по применению
+          </p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">Патент</p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">Исследования</p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">
+            Презентации
+            <br>
+            препарата
+          </p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="about__item">
+          <p class="about__item-title tl4">Статьи по теме</p>
+          <div class="about__item-btn">
+            <div class="about__item-btn-svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill" d="M2.92996 9.15173L2.07996 9.15173L2.07996 10.8517L2.92996 10.8517L2.92996 10.0017L2.92996 9.15173ZM16.1882 10.8517C16.6576 10.8517 17.0382 10.4712 17.0382 10.0017C17.0382 9.53229 16.6576 9.15173 16.1882 9.15173L16.1882 10.0017L16.1882 10.8517ZM2.92996 10.0017L2.92996 10.8517H16.1882L16.1882 10.0017L16.1882 9.15173H2.92996L2.92996 10.0017Z" fill="#393C43"></path>
+                <path class="stroke" d="M11.3247 4.25561L17.0699 10.0009L11.3247 15.7461" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+         </div>
+    </div>
+  </div>
+</section>
+
+        <section class="where" id="where">
+  <div class="where__container container">
+    <div class="where__inner">
+      <p class="where__title tl2">
+        Где купить Типрессин
+        <sup>®</sup>
+      </p>
+      <ul class="where__list">
+        <li class="where__item">
+          <a href="#" class="where__link">
+            <div class="where__img-box">
+              <img loading="lazy" src="./assets/images/where/1.webp" alt="">
+            </div>
+            <div class="where__city-box">
+              <p class="where__city txt20 txt20_medium">Москва</p>
+            </div>
+          </a>
+        </li>
+        <li class="where__item">
+          <a href="#" class="where__link">
+            <div class="where__img-box">
+              <img loading="lazy" src="./assets/images/where/2.webp" alt="">
+            </div>
+            <div class="where__city-box">
+              <p class="where__city txt20 txt20_medium">Уфа, Москва</p>
+            </div>
+          </a>
+        </li>
+        <li class="where__item">
+          <a href="#" class="where__link">
+            <div class="where__img-box">
+              <img loading="lazy" src="./assets/images/where/3.webp" alt="">
+            </div>
+            <div class="where__city-box">
+              <p class="where__city txt20 txt20_medium">Краснодар, Москва</p>
+            </div>
+          </a>
+        </li>
+        <li class="where__item">
+          <a href="#" class="where__link">
+            <div class="where__img-box">
+              <img loading="lazy" src="./assets/images/where/4.webp" alt="">
+            </div>
+            <div class="where__city-box">
+              <p class="where__city txt20 txt20_medium">Москва</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        <section class="application" id="application">
+  <div class="application__container container">
+    <div class="application__inner">
+      <p class="application__title tl2">Есть вопросы? Напишите нам</p>
+      <div class="application__body">
+        <form class="application__form form" data-popup-message="#popup__success" data-dev="" action="">
+          <div class="application__input-box">
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input class="input--name form__input" type="text" data-validate="" data-required="name" autocomplete="off" name="form[]" placeholder="Введите имя">
+                <span class="form__input-placeholder">Имя</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper txt20">
+                <input class="input--mail form__input" type="text" data-validate="" data-required="email" autocomplete="off" name="form[]" placeholder="Введите email">
+                <span class="form__input-placeholder">Email</span>
+              </span>
+              <span class="form__error-span form__absolute-span">Поле не заполнено</span>
+            </label>
+
+            <label class="application__label form__input-group">
+              <span class="form__input-wrapper form__input-wrapper--textarea txt20">
+                <div class="form__textarea-wrapper">
+                  <textarea class="form__textarea application__form-textarea" name="form[]" placeholder="E-mail"></textarea>
+                </div>
+              </span>
+              <span class="form__textarea-span form__absolute-span" data-length="450">
+                Осталось
+                <span></span>
+                символов
+              </span>
+            </label>
+
+            <div id="captcha-container" class="smart-captcha" data-sitekey="">
+              <input type="hidden" name="smart-token" value="">
+            </div>
+          </div>
+          <div class="application__btn-box">
+            <label class="application__agreement-label">
+              <input type="checkbox" class="application__agreement-checkbox">
+              <span class="application__agreement-square"></span>
+              <span class="application__agreement-text txt16">
+                Соглашаюсь на&nbsp;
+                <a href="#">Обработку персональных данных</a>
+                и&nbsp;принимаю
+                <a href="#">Условия политики конфиденциальности</a>
+              </span>
+            </label>
+            <button disabled="" type="submit" class="application__btn">Отправить</button>
+          </div>
+        </form>
+
+        <div class="application__img">
+          <img src="./assets/images/materialsImg/applicationPhoto.webp" loading="lazy" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <div class="cookie cookie--show">
+  <div class="cookie__container container">
+    <div class="cookie__inner">
+      <div class="cookie__text-box">
+        <p class="cookie__text txt20"></p>
+        <p class="cookie__text txt20">
+          АО «Бофарм» использует файлы
+          <a href="#">cookie</a>
+          , чтобы настоящий веб-сайт работал для Вас быстрее и эффективнее.
+        </p>
+
+        <div class="cookie__link-box">
+          <a href="#" class="cookie__link">Политика использования файлов Cookie АО «ОТИСИФАРМ»</a>
+        </div>
+      </div>
+
+      <button class="cookie__btn txt18 txt18_medium">согласен</button>
+    </div>
+  </div>
+</div>
+
+      <div class="disclaimer disclaimer--show">
+  <div class="disclaimer__container container">
+    <div class="disclaimer__inner">
+      <div class="disclaimer__svg-box">
+        <img src="./assets/images/disclaimer.svg" class="desktop" alt="">
+        <img src="./assets/images/disclaimerMob.svg" class="mobile" alt="">
+      </div>
+
+      <button class="disclaimer__btn">
+        <div class="disclaimer__btn-svg-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.45605 2.45539L17.5453 17.5447" stroke="#393C43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.45605 17.5447L17.5453 2.45539" stroke="#393C43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__inner">
+      <div class="footer__content">
+        <div class="footer__logo-box ">
+          <a href="#" class="footer__logo-img-box nav-top-link">
+            <img src="./assets/images/logo.webp" alt="" loading="lazy">
+          </a>
+          <p class="txt18 txt18_medium">Лечение и&nbsp;профилактика заболеваний аллергического спектра.</p>
+        </div>
+
+        <nav class="footer__nav-box">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#history" class="footer__nav-link txt16 txt16_medium nav-link">История препарата</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#characteristics" class="footer__nav-link txt16 txt16_medium nav-link">Преимущества</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#about" class="footer__nav-link txt16 txt16_medium nav-link">О препарате</a>
+            </li>
+          </ul>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#where" class="footer__nav-link txt16 txt16_medium nav-link">Где купить</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link txt16 txt16_medium">Пользовательское соглашение</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__nav-social-box">
+          <p class="footer__nav-social-title">Контактная информация:</p>
+          <ul class="footer__nav-social-list">
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">АО «Бофарм»</p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">
+                Юридический адрес: 141191, Московская область, г. Фрязино, ул. Станционная, д. 2, строение 10, этаж 1, пом. 127
+              </p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">Почтовый адрес: 123182, г. Москва, а/я 4</p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">
+                Электронная почта:
+
+                <a href="mailto:tipressin@mail.ru">tipressin@mail.ru</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#" class="footer__scroll-top-btn nav-top-link">
+          <div class="footer__scroll-top-btn-svg-box">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.15076 17.2097L9.15076 18.0597L10.8508 18.0597L10.8508 17.2097L9.15076 17.2097ZM10.8508 3.95144C10.8508 3.482 10.4702 3.10144 10.0008 3.10144C9.53131 3.10144 9.15076 3.482 9.15076 3.95144L10.8508 3.95144ZM10.0008 17.2097L10.8508 17.2097V3.95144L10.0008 3.95144L9.15076 3.95144V17.2097L10.0008 17.2097Z" fill="#393C43"></path>
+              <path d="M4.25463 8.81494L9.99987 3.0697L15.7451 8.81494" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer__disclamer">
+        <img src="./assets/images/disclaimerFooter.svg" class="desktop" alt="">
+        <img src="./assets/images/disclaimerMobFooter.svg" class="mobile" alt="">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fancybox-bg"></div>
+
+    </div>
+  </body>
+</html>

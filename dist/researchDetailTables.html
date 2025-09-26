@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Исследования</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper ">
+      <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__inner">
+      <button class="header__burger mobile">
+        <div class="header__burger-svg-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 5.83334H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M2.5 10H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M2.5 14.1667H17.5" stroke="#2F3235" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </button>
+      <a href="#header" class="header__logo-box nav-link">
+        <div class="header__logo-img-box">
+          <img src="./assets/images/logo.webp" loading="lazy" alt="">
+        </div>
+      </a>
+      <button class="header__burger-close mobile">
+        <div class="header__burger-close-svg-box">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.0358 1.96484L1.96436 14.0363" stroke="#717378" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1.96436 1.96484L14.0358 14.0363" stroke="#717378" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </button>
+      <div class="header__nav-wrapper" data-lenis-prevent="true">
+        <div class="header__nav-inner">
+          <nav class="header__nav-box">
+            <ul class="header__nav-list">
+              <li class="header__nav-item mobile">
+                <a href="#history" class="header__nav-link txt16 txt16_medium nav-link">История препарата</a>
+              </li>
+              <li class="header__nav-item mobile">
+                <a href="#characteristics" class="header__nav-link txt16 txt16_medium nav-link">Преимущества</a>
+              </li>
+              <li class="header__nav-item mobile">
+                <a href="#about" class="header__nav-link txt16 txt16_medium nav-link">О препарате</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link txt16 txt16_medium nav-link">Инструкция по применению</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Где купить</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Исследования</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Презентации препарата</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Статьи по теме</a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="#where" class="header__nav-link txt16 txt16_medium nav-link">Контакты</a>
+              </li>
+            </ul>
+
+            <a href="#application" class="header__nav-btn txt18 txt18_medium accent-btn nav-link">Задать вопрос</a>
+          </nav>
+
+          <div class="header__nav-social-box mobile">
+            <p class="header__nav-social-title">Контактная информация:</p>
+            <ul class="header__nav-social-list">
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">АО «Бофарм»</p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Юридический адрес: 141191, Московская область, г. Фрязино, ул. Станционная, д. 2, строение 10, этаж 1, пом. 127
+                </p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">Почтовый адрес: 123182, г. Москва, а/я 4</p>
+              </li>
+
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Телефон:
+                  <a href="tel:+74959891776">+7 (495) 989–17–76</a>
+                </p>
+              </li>
+              <li class="header__nav-social-item">
+                <p class="header__nav-social-item-text">
+                  Электронная почта:
+
+                  <a href="mailto:sales@bofarm.ru">sales@bofarm.ru</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div id="popup__characteristics1" aria-hidden="true" class="popup popup--characteristics" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title txt20">
+              Блоки из отчёта о 3-й фазе КИ с комментарием о постановке задачи на наблюдательный дневниковый период после курса
+              терапии в сравнении с препаратами контрольной группы и результатах
+            </p>
+            <p class="popup__body-content-desk txt16">
+              «В ходе терапии были выявлены значимые различия (p-value = 0.02557) на визите 4 по показателю сон (трудности с
+              засыпанием или отсутствие комфортного крепкого сна) – пациенты основной группы ставили более низкие баллы по шкале
+              MiniRQLQ и таким образом оценивали качество сна выше. Анализ дневников показал, что в течение всего периода
+              наблюдения (30 суток) по окончании терапии наблюдалась тенденция среди пациентов группы сравнения чаще отмечать
+              проявление неназальных симптомов, а также требовать дополнительных препаратов» (из раздела «Результаты оценки
+              эффективности, вторичные конечные точки» Отчёта о КИ № KI-THYM-001от 17.10.2017).
+            </p>
+          </div>
+
+          <a href="google.com" target="_blank" class="popup__link txt18 txt18_medium">Скачать Файл исследования</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- data-popup-no-close добавить атрибут, если не нужно эту модалку закрывать на клик по оверлею, только по внутненним кнопкам закрытия-->
+<div id="popup__arise-expert" data-popup-no-close="" aria-hidden="true" class="popup popup--arise-expert" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn" style="opacity: 0; visibility: hidden;">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-desk txt16">
+              В данном разделе информация предназначена исключительно для специалистов в области здравоохранения – медицинских и
+              фармацевтических работников.
+            </p>
+            <p class="popup__body-content-title txt20">Вы являетесь медицинским специалистом?</p>
+          </div>
+          <div class="popup__btn-box">
+            <button class="popup__btn popup__btn--yes" data-close="">да</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__success" aria-hidden="true" class="popup popup--success" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__body-close-btn">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.2836 14.8766L5.50432 5.09735M15.1663 5.14284L5.48288 14.8262" stroke="#717378" stroke-width="1.83466" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content-box">
+          <div class="popup__body-content-text-box">
+            <p class="popup__body-content-title tl4">Ваш вопрос принят</p>
+            <p class="popup__body-content-desk txt20">
+              Специалист отправит ответ в&nbsp;ближайшее время на&nbsp;указанный вами почтовый адрес
+            </p>
+          </div>
+
+          <a href="#" class="popup__link txt18 txt18_medium">Хорошо</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <main>
+        <section class="material-det _first">
+          <div class="material-det__container container">
+            <div class="material-det__inner">
+              <div class="material-contents">
+                <div class="material-contents__body material-body">
+                  <!-- блок с таблицей -->
+                  <div class="material-body__block">
+                    <h2 id="table1">Влияние Тимодепрессина на кроветворение</h2>
+                    <div class="material-body__table-box">
+                      <p>
+                        Клетки костного мозга инкубировали с различным количеством Тимодепрессина при 37 С в течение 1 часа. Затем
+                        без отмывки их вво¬дили в/в летально облученным реципиентам. Учет колоний проводили на 9 день.
+                      </p>
+                      <div class="material-body__table-wrapper">
+                        <div class="material-body__table">
+                          <div class="material-body__table-head">
+                            <div>
+                              <p>Доза препарата (мкг / мл)</p>
+                            </div>
+                            <div>
+                              <p>Число мышей</p>
+                            </div>
+                            <div>
+                              <p>Количество колоний</p>
+                            </div>
+                            <div>
+                              <p>Р</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Контроль</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+
+                            <div>
+                              <p>9,0 ± 0,6#</p>
+                            </div>
+                            <div>
+                              <p></p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="material-body__table-scrollbar">
+                          <div class="material-body__table-scrollbar-thumb"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- блок с таблицей -->
+                  <div class="material-body__block">
+                    <h2 id="table1">Влияние Тимодепрессина на кроветворение</h2>
+                    <div class="material-body__table-box">
+                      <p>
+                        Клетки костного мозга инкубировали с различным количеством Тимодепрессина при 37 С в течение 1 часа. Затем
+                        без отмывки их вво¬дили в/в летально облученным реципиентам. Учет колоний проводили на 9 день.
+                      </p>
+                      <div class="material-body__table-wrapper">
+                        <div class="material-body__table">
+                          <div class="material-body__table-head">
+                            <div>
+                              <p>Доза препарата (мкг / мл)</p>
+                            </div>
+                            <div>
+                              <p>Число мышей</p>
+                            </div>
+                            <div>
+                              <p>Количество колоний</p>
+                            </div>
+                            <div>
+                              <p>Р</p>
+                            </div>
+                            <div>
+                              <p>Р</p>
+                            </div>
+                            <div>
+                              <p>Р</p>
+                            </div>
+                            <div>
+                              <p>Р</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Контроль</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>9,0 ± 0,6#</p>
+                            </div>
+                            <div>
+                              <p></p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>0,02</p>
+                            </div>
+                            <div>
+                              <p>20</p>
+                            </div>
+                            <div>
+                              <p>3,6 ± 0,5</p>
+                            </div>
+                            <div>
+                              <p>&lt;0,05</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="material-body__table-scrollbar">
+                          <div class="material-body__table-scrollbar-thumb"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- блок с таблицей -->
+                  <div class="material-body__block">
+                    <h2 id="table1">Влияние Тимодепрессина на кроветворение</h2>
+                    <div class="material-body__table-box">
+                      <p>
+                        Клетки костного мозга инкубировали с различным количеством Тимодепрессина при 37 С в течение 1 часа. Затем
+                        без отмывки их вво¬дили в/в летально облученным реципиентам. Учет колоний проводили на 9 день.
+                      </p>
+                      <div class="material-body__table-wrapper">
+                        <!-- <div class="material-body__table">
+                          <div class="material-body__table-col">
+                            <div><p>Подзаголовок</p></div>
+                            <div><p>Название</p></div>
+                            <div><p>Название</p></div>
+                            <div><p>Название</p></div>
+                            <div><p>Название</p></div>
+                            <div><p>Название</p></div>
+                            <div><p>Название</p></div>
+                          </div>
+                          <div class="material-body__table-col">
+                            <div><p>Подзаголовок</p></div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                            <div>
+                              <p>
+                                Текстовая информация,
+                                <br />
+                                которая занимает 2 строки
+                              </p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-col">
+                            <div><p>Подзаголовок</p></div>
+                            <div><p>48</p></div>
+                            <div><p>48</p></div>
+                            <div><p>48</p></div>
+                            <div><p>48</p></div>
+                            <div><p>48</p></div>
+                            <div><p>48</p></div>
+                          </div>
+                        </div> -->
+                        <div class="material-body__table">
+                          <div class="material-body__table-head">
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="material-body__table-scrollbar">
+                          <div class="material-body__table-scrollbar-thumb"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- блок с таблицей -->
+                  <div class="material-body__block">
+                    <h2 id="table1">Влияние Тимодепрессина на кроветворение</h2>
+                    <div class="material-body__table-box">
+                      <p>
+                        Клетки костного мозга инкубировали с различным количеством Тимодепрессина при 37 С в течение 1 часа. Затем
+                        без отмывки их вво¬дили в/в летально облученным реципиентам. Учет колоний проводили на 9 день.
+                      </p>
+                      <div class="material-body__table-wrapper">
+                        <div class="material-body__table">
+                          <div class="material-body__table-head">
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                            <div>
+                              <p>Подзаголовок</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                          <div class="material-body__table-row">
+                            <div>
+                              <p>Название</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>Текстовая информация, которая занимает 2 строки</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                            <div>
+                              <p>48</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="material-body__table-scrollbar">
+                          <div class="material-body__table-scrollbar-thumb"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <div class="cookie cookie--show">
+  <div class="cookie__container container">
+    <div class="cookie__inner">
+      <div class="cookie__text-box">
+        <p class="cookie__text txt20"></p>
+        <p class="cookie__text txt20">
+          АО «Бофарм» использует файлы
+          <a href="#">cookie</a>
+          , чтобы настоящий веб-сайт работал для Вас быстрее и эффективнее.
+        </p>
+
+        <div class="cookie__link-box">
+          <a href="#" class="cookie__link">Политика использования файлов Cookie АО «ОТИСИФАРМ»</a>
+        </div>
+      </div>
+
+      <button class="cookie__btn txt18 txt18_medium">согласен</button>
+    </div>
+  </div>
+</div>
+
+      <div class="disclaimer disclaimer--show">
+  <div class="disclaimer__container container">
+    <div class="disclaimer__inner">
+      <div class="disclaimer__svg-box">
+        <img src="./assets/images/disclaimer.svg" class="desktop" alt="">
+        <img src="./assets/images/disclaimerMob.svg" class="mobile" alt="">
+      </div>
+
+      <button class="disclaimer__btn">
+        <div class="disclaimer__btn-svg-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.45605 2.45539L17.5453 17.5447" stroke="#393C43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.45605 17.5447L17.5453 2.45539" stroke="#393C43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+ -->
+      <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__inner">
+      <div class="footer__content">
+        <div class="footer__logo-box ">
+          <a href="#" class="footer__logo-img-box nav-top-link">
+            <img src="./assets/images/logo.webp" alt="" loading="lazy">
+          </a>
+          <p class="txt18 txt18_medium">Лечение и&nbsp;профилактика заболеваний аллергического спектра.</p>
+        </div>
+
+        <nav class="footer__nav-box">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#history" class="footer__nav-link txt16 txt16_medium nav-link">История препарата</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#characteristics" class="footer__nav-link txt16 txt16_medium nav-link">Преимущества</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#about" class="footer__nav-link txt16 txt16_medium nav-link">О препарате</a>
+            </li>
+          </ul>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#where" class="footer__nav-link txt16 txt16_medium nav-link">Где купить</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link txt16 txt16_medium">Пользовательское соглашение</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__nav-social-box">
+          <p class="footer__nav-social-title">Контактная информация:</p>
+          <ul class="footer__nav-social-list">
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">АО «Бофарм»</p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">
+                Юридический адрес: 141191, Московская область, г. Фрязино, ул. Станционная, д. 2, строение 10, этаж 1, пом. 127
+              </p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">Почтовый адрес: 123182, г. Москва, а/я 4</p>
+            </li>
+            <li class="footer__nav-social-item">
+              <p class="footer__nav-social-item-text">
+                Электронная почта:
+
+                <a href="mailto:tipressin@mail.ru">tipressin@mail.ru</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#" class="footer__scroll-top-btn nav-top-link">
+          <div class="footer__scroll-top-btn-svg-box">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.15076 17.2097L9.15076 18.0597L10.8508 18.0597L10.8508 17.2097L9.15076 17.2097ZM10.8508 3.95144C10.8508 3.482 10.4702 3.10144 10.0008 3.10144C9.53131 3.10144 9.15076 3.482 9.15076 3.95144L10.8508 3.95144ZM10.0008 17.2097L10.8508 17.2097V3.95144L10.0008 3.95144L9.15076 3.95144V17.2097L10.0008 17.2097Z" fill="#393C43"></path>
+              <path d="M4.25463 8.81494L9.99987 3.0697L15.7451 8.81494" stroke="#393C43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer__disclamer">
+        <img src="./assets/images/disclaimerFooter.svg" class="desktop" alt="">
+        <img src="./assets/images/disclaimerMobFooter.svg" class="mobile" alt="">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fancybox-bg"></div>
+
+    </div>
+  </body>
+</html>
