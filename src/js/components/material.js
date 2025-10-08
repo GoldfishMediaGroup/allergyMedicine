@@ -245,16 +245,13 @@ function material() {
   //   });
   // }
 
-  function materialVideo() {
-   
-    
-  }
+
 
   materialTable();
   materialSwiper();
   checkOverflowAndAdjust('.info-list-det');
   checkOverflowAndAdjust('.info-list');
-  materialVideo();
+  // materialVideo();
   window.addEventListener('resize', () => {
     checkOverflowAndAdjust('.info-list-det');
     checkOverflowAndAdjust('.info-list');
