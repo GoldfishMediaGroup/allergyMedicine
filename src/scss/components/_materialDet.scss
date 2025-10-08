@@ -489,7 +489,8 @@
 
   &__video {
     width: 100%;
-    height: 89rem;
+    height: calc(100vh - 17rem);
+    max-height: 89rem;
     border-radius: 3.8rem;
     overflow: hidden;
     position: relative;
@@ -497,6 +498,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background: $accent;
     @include tablet {
       height: 39.6rem;
       border-radius: 1.2rem;
@@ -526,7 +528,7 @@
     & iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
