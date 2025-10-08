@@ -212,12 +212,14 @@
       height: 100%;
       object-fit: cover;
     }
-    & video {
+    & video,
+    & iframe {
       width: fit-content;
       height: 100%;
       object-fit: contain;
       border-radius: 0.8rem;
       display: block;
+      pointer-events: none!important;
     }
 
     @include tablet {
