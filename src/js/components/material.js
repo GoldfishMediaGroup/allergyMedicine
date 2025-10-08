@@ -221,28 +221,33 @@ function material() {
     });
   }
 
+  // function materialVideo() {
+  //   const videos = document.querySelectorAll('video');
+  //   if (!videos.length) return;
+
+  //   videos.forEach((video) => {
+  //     video.addEventListener('play', () => {
+  //       video.parentElement.classList.add('isActive');
+  //     });
+
+  //     video.addEventListener('pause', () => {
+  //       video.parentElement.classList.remove('isActive');
+  //     });
+
+  //     // Если нужно запускать по клику на сам контейнер
+  //     video.addEventListener('click', () => {
+  //       if (video.paused) {
+  //         video.parentElement.classList.add('isActive');
+  //       } else {
+  //         video.parentElement.classList.remove('isActive');
+  //       }
+  //     });
+  //   });
+  // }
+
   function materialVideo() {
-    const videos = document.querySelectorAll('video');
-    if (!videos.length) return;
-
-    videos.forEach((video) => {
-      video.addEventListener('play', () => {
-        video.parentElement.classList.add('isActive');
-      });
-
-      video.addEventListener('pause', () => {
-        video.parentElement.classList.remove('isActive');
-      });
-
-      // Если нужно запускать по клику на сам контейнер
-      video.addEventListener('click', () => {
-        if (video.paused) {
-          video.parentElement.classList.add('isActive');
-        } else {
-          video.parentElement.classList.remove('isActive');
-        }
-      });
-    });
+   
+    
   }
 
   materialTable();
